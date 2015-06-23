@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Flexgrid demo</title>
+    <link rel="stylesheet" href="css/flexgrid.min.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- HTML5 Shiv + Respond.js for IE>9 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.cloudcache.dk/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="http://cdn.cloudcache.dk/respons.js/1.4.2/respond.js"></script> 
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="pad-me">
+          <h1 class="h1-title">Flexgrid </h1>
+        </div>
+        <div class="s12 xl">
+          <h1>- a simple grid based on <span class="code">flexbox</span> layout</h1>
+        </div>
+      </div>
+      <div class="row">
+        <p>No more floats! If a regular grid layout such as my own <a href="https://mdevdk.github.com/k-grid">K-grid</a> is based on both block and inline flow directions, the flexbox (or just flex) layout is based on "flex-flow directions". Thus <span class="code">float</span> and <span class="code">clear</span> have no effect. Using <span class="code">float</span> causes the <span class="code">display</span>-property to compute to <span class="code">block</span>. Using <span class="code">flexbox</span> also means less JavaScript! And as per K-grid standard, everything is responsive and stacks perfectly. <span class="hidden-m hidden-s">Try by resizing your browser or view this site from a mobile device or tablet.</span></p>
+
+        <p><strong>Please note:</strong> flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. More info <a href="http://caniuse.com/#search=flexbox">here</a>.</p>
+      </div>
+      <div class="row"><h2>.container</h2></div>
+      <div class="row">
+        <p>Flexgrid comes with responsive containers that boxes the content in which are controlled by <span class="code">@media</span>-queries. These <span class="code">@media</span>-queries trigger at the same widths defined by the <a href="http://getbootstrap.com">Bootstrap</a>-framework. However, as a small detail, Flexgrid bases its width-triggers on <span class="code">rem</span> instead of <span class="code">px</span>. This creates a much more fluid layout. While <span class="code">em</span> is relative to the <span class="code">font-size</span> of its direct or nearest parent, <span class="code">rem</span> is only relative to the <span class="code">html</span> (root) <span class="code">font-size</span>. Flexgrid <span class="code">font-size</span> is set to 16.</p>
+        <p>There is also a fluid container that has no <span class="code">@media</span>-queries. Look further down for examples.</p>
+      </div>
+      <div class="row"><h3>Columns</h3></div>
+      <div class="row">
+        <p>Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.</p>
+      </div>
+      <div class="row">
+        <div class="s12 m12 l3 xl2 demo">column</div>
+        <div class="s6 m6 l6 xl8 demo">column</div>
+        <div class="s6 m6 l3 xl2 demo">column</div>
+        <div class="s12 m6 l6 xl8 demo">column</div>
+        <div class="s12 m6 l6 xl4 demo">column</div>
+      </div>
+
+      <div class="row"><h3>Offsets</h3></div>
+      <div class="row">
+        <p>It's fairly easy to offset columns.</p>
+      </div>
+      <div class="row">
+        <div class="s-offset-9 s3 demo">offset</div>
+        <div class="s-offset-6 s6 demo">offset</div>
+        <div class="s-offset-3 s9 demo">offset</div>
+      </div>
+
+      <div class="row"><h3>Auto width</h3></div>
+      <div class="row">
+        <p>This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+      </div>
+      <div class="row">
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">streeeeeeeetch</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: space-around</h3></div>
+      <div class="row">
+        <p>With <span class="code">space-around</span>, items are evenly distributed in the line with equal space around them.</p>
+      </div>
+      <div class="row s-around">
+        <div class="s12 m6 l2 demo">around</div>
+        <div class="s12 m6 l2 demo">around</div>
+        <div class="s12 m6 l2 demo">around</div>
+        <div class="s12 m6 l2 demo">around</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: space-between</h3></div>
+      <div class="row">
+        <p><span class="code">space-between</span> distributes items in the line; first item is on the start line, last item on the end line.</p>
+      </div>
+      <div class="row s-between">
+        <div class="s12 m6 l3 demo">between</div>
+        <div class="s12 m6 l3 demo">between</div>
+        <div class="s12 m6 l3 demo">between</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: start, center, end</h3></div>
+      <div class="row">
+        <p><span class="code">start</span>: (default): items are packed toward the start line.<br />
+        <span class="code">center</span>: tems are centered along the line.<br />
+        <span class="code">end</span>: items are packed toward to end line.</p>
+      </div>
+      <div class="row m-start">        
+        <div class="s12 m3 demo">start</div>
+      </div>
+      <div class="row m-center">
+        <div class="s12 m3 demo">center</div>
+      </div>
+      <div class="row m-end">
+        <div class="s12 m3 demo">end</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: top, middle, bottom</h3></div>
+      <div class="row">
+        <p>Vertically aligning items can be a pain. But not with <span class="code">flexbox</span>.</p>
+      </div>
+      <div class="row s-top">        
+        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="s12 m6 demo">top</div>
+      </div>
+      <div class="row s-middle">
+        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="s12 m6 demo">middle</div>
+      </div>
+      <div class="row s-bottom">
+        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="s12 m6 demo">bottom</div>
+      </div>
+
+      <div class="row"><h3>Ordering</h3></div>
+      <div class="row">
+        <p>By default, items are laid out in the source order. However, the <span class="code">order</span>-property controls the order in which they appear in the container.</p>
+      </div>
+      <div class="row">
+        <div class="s12 m6 l demo">1</div>
+        <div class="s12 m6 l s-last demo">2</div>
+        <div class="s12 m6 l demo">3</div>
+        <div class="s12 m6 l demo">4</div>
+        <div class="s12 m6 l demo">5</div>
+        <div class="s12 m6 l s-first demo">6</div>
+      </div>
+
+      <div class="row"><h3>Reversing</h3></div>
+      <div class="row">
+        <p>Reversing is basically the same as <span class="code">direction: rtl</span>, just smarter. You no longer have to reverse the <span class="code">direction</span> inside the item for text to align properly.</p>
+      </div>
+      <div class="row reverse">
+        <div class="s12 m6 l demo">1</div>
+        <div class="s12 m6 l demo">2</div>
+        <div class="s12 m6 l demo">3</div>
+        <div class="s12 m6 l demo">4</div>
+        <div class="s12 m6 l demo">5</div>
+        <div class="s12 m6 l demo">6</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row"><h2>.container-fluid</h2></div>
+      <div class="row"><h3 class="title">Columns</h3></div>
+      <div class="row">
+        <div class="s12 m12 l3 xl2 demo">column</div>
+        <div class="s6 m6 l6 xl8 demo">column</div>
+        <div class="s6 m6 l3 xl2 demo">column</div>
+        <div class="s12 m6 l6 xl8 demo">column</div>
+        <div class="s12 m6 l6 xl4 demo">column</div>
+      </div>
+
+      <div class="row"><h3>Offsets</h3></div>
+      <div class="row">
+        <div class="s-offset-9 s3 demo">offset</div>
+        <div class="s-offset-6 s6 demo">offset</div>
+        <div class="s-offset-3 s9 demo">offset</div>
+      </div>
+
+      <div class="row"><h3>Auto width</h3></div>
+      <div class="row">
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">streeeeeeeetch</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+        <div class="s12 m6 l demo">auto</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: space-around</h3></div>
+      <div class="row s-around">
+        <div class="s12 m6 l2 demo">around</div>
+        <div class="s12 m6 l2 demo">around</div>
+        <div class="s12 m6 l2 demo">around</div>
+        <div class="s12 m6 l2 demo">around</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: space-between</h3></div>
+      <div class="row s-between">
+        <div class="s12 m6 l3 demo">between</div>
+        <div class="s12 m6 l3 demo">between</div>
+        <div class="s12 m6 l3 demo">between</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: start, center, end</h3></div>
+      <div class="row m-start">        
+        <div class="s12 m3 demo">start</div>
+      </div>
+      <div class="row m-center">
+        <div class="s12 m3 demo">center</div>
+      </div>
+      <div class="row m-end">
+        <div class="s12 m3 demo">end</div>
+      </div>
+
+      <div class="row"><h3>Justifying content: top, middle, bottom</h3></div>
+      <div class="row s-top">        
+        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="s12 m6 demo">top</div>
+      </div>
+      <div class="row s-middle">
+        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="s12 m6 demo">middle</div>
+      </div>
+      <div class="row s-bottom">
+        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="s12 m6 demo">bottom</div>
+      </div>
+
+      <div class="row"><h3>Ordering</h3></div>
+      <div class="row">
+        <div class="s12 m6 l demo">1</div>
+        <div class="s12 m6 l s-last demo">2</div>
+        <div class="s12 m6 l demo">3</div>
+        <div class="s12 m6 l demo">4</div>
+        <div class="s12 m6 l demo">5</div>
+        <div class="s12 m6 l s-first demo">6</div>
+      </div>
+
+      <div class="row"><h3>Reversing</h3></div>
+      <div class="row reverse">
+        <div class="s12 m6 l demo">1</div>
+        <div class="s12 m6 l demo">2</div>
+        <div class="s12 m6 l demo">3</div>
+        <div class="s12 m6 l demo">4</div>
+        <div class="s12 m6 l demo">5</div>
+        <div class="s12 m6 l demo">6</div>
+      </div>
+    </div>
+
+    <footer class="container-fluid">
+      <div class="row m-center">
+        <div class="s12"><p>Made with <i class="mdi mdi-heart heart"></i> by <a href="https://github.com/mdevdk">Morten S&oslash;rensen</a></p></div>
+      </div>
+    </footer>
+  </body>
+</html>
