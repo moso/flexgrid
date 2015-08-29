@@ -57,5 +57,5 @@ Reversing is basically the same as `direction: rtl`, just smarter. You no longer
 
 [K-grid]:https://mdevdk.github.com/k-grid
 [here]:http://caniuse.com/#search=flexbox
-[DEMO]:http://flexgrid.moso.io/demo.html
+[DEMO]:http://flexgrid.moso.io
 [Bootstrap]:http://getbootstrap.com
