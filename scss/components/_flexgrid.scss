@@ -1,0 +1,258 @@
+// Vars
+$columns: 12 !default;
+$base-font-size: 16px;
+
+// Container media query mixin includes
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem
+}
+@include medium() {
+  .container {
+    width: (750px / $base-font-size) * 1rem
+  }
+}
+@include large() {
+  .container {
+    width: (970px / $base-font-size) * 1rem
+  }
+}
+@include xlarge() {
+  .container {
+    width: (1170px / $base-font-size)* 1rem
+  }
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem
+}
+.row {
+  @include flexbox();
+  @include flex(0 1 auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin-right: -1rem;
+  margin-left: -1rem
+}
+.row.reverse {
+  @include flex-direction(reverse)
+}
+
+// The grid
+%col, .s, .m, .l, .xl {
+  @include flex(0 0 auto);
+  padding-right: 1rem;
+  padding-left: 1rem
+}
+
+@for $i from 1 through $columns {
+  .s#{$i}, .m#{$i}, .l#{$i}, .xl#{$i} {
+    @extend %col;
+  }
+}
+
+.s {
+  @include flex-grow(1);
+  @include flex-basis(0);
+  max-width: 100%
+}
+.s-start {
+  @include flex-start();
+}
+.s-center {
+  @include flex-center();
+}
+.s-end {
+  @include flex-end();
+}
+.s-top {
+  @include flex-top();
+}
+.s-middle {
+  @include flex-middle();
+}
+.s-bottom {
+  @include flex-bottom();
+}
+.s-around {
+  @include flex-around();
+}
+.s-between {
+  @include flex-between();
+}
+.s-first {
+  @include flex-order(-1);
+}
+.s-last {
+  @include flex-order(1);
+}
+.s-reverse {
+  @include flex-direction(column-reverse);
+}
+
+@for $i from 1 through $columns {
+  .s#{$i} {
+    @include flex-basis($i / $columns * 100%);
+    max-width: $i / $columns * 100%;
+  }
+  .s-offset-#{$i} {
+    margin-left: $i / $columns * 100%;
+  }
+}
+
+@include medium() {
+  .m {
+    @include flex-grow(1);
+    @include flex-basis(0);
+    max-width: 100%
+  }  
+  .m-start {
+    @include flex-start();
+  }
+  .m-center {
+    @include flex-center();
+  }
+  .m-end {
+    @include flex-end();
+  }
+  .m-top {
+    @include flex-top();
+  }
+  .m-middle {
+    @include flex-middle();
+  }
+  .m-bottom {
+    @include flex-bottom();
+  }
+  .m-around {
+    @include flex-around();
+  }
+  .m-between {
+    @include flex-between();
+  }
+  .m-first {
+    @include flex-order(-1);
+  }
+  .m-last {
+    @include flex-order(1);
+  }
+  .m-reverse {
+    @include flex-direction(column-reverse);
+  }
+
+  @for $i from 1 through $columns {
+    .m#{$i} {
+      @include flex-basis($i / $columns * 100%);
+      max-width: $i / $columns * 100%;
+    }
+    .m-offset-#{$i} {
+      margin-left: $i / $columns * 100%;
+    }
+  }
+}
+
+@include large() {
+  .l {
+    @include flex-grow(1);
+    @include flex-basis(0);
+    max-width: 100%
+  }
+  .l-start {
+    @include flex-start();
+  }
+  .l-center {
+    @include flex-center();
+  }
+  .l-end {
+    @include flex-end();
+  }
+  .l-top {
+    @include flex-top();
+  }
+  .l-middle {
+    @include flex-middle();
+  }
+  .l-bottom {
+    @include flex-bottom();
+  }
+  .l-around {
+    @include flex-around();
+  }
+  .l-between {
+    @include flex-between();
+  }
+  .l-first {
+    @include flex-order(-1);
+  }
+  .l-last {
+    @include flex-order(1);
+  }
+  .l-reverse {
+    @include flex-direction(column-reverse);
+  }
+
+  @for $i from 1 through $columns {
+    .l#{$i} {
+      @include flex-basis($i / $columns * 100%);
+      max-width: $i / $columns * 100%;
+    }
+    .l-offset-#{$i} {
+      margin-left: $i / $columns * 100%;
+    }
+  }
+}
+
+@include xlarge() {
+  .xl {
+    @include flex-grow(1);
+    @include flex-basis(0);
+    max-width: 100%
+  }
+  .xl-start {
+    @include flex-start();
+  }
+  .xl-center {
+    @include flex-center();
+  }
+  .xl-end {
+    @include flex-end();
+  }
+  .xl-top {
+    @include flex-top();
+  }
+  .xl-middle {
+    @include flex-middle();
+  }
+  .xl-bottom {
+    @include flex-bottom();
+  }
+  .xl-around {
+    @include flex-around();
+  }
+  .xl-between {
+    @include flex-between();
+  }
+  .xl-first {
+    @include flex-order(-1);
+  }
+  .xl-last {
+    @include flex-order(1);
+  }
+  .xl-reverse {
+    @include flex-direction(column-reverse);
+  }
+
+  @for $i from 1 through $columns {
+    .xl#{$i} {
+      @include flex-basis($i / $columns * 100%);
+      max-width: $i / $columns * 100%;
+    }
+    .xl-offset-#{$i} {
+      margin-left: $i / $columns * 100%;
+    }
+  }
+}

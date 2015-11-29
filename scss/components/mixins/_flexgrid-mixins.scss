@@ -1,0 +1,122 @@
+$medium-width: 48rem;
+$large-width: 62rem;
+$xlarge-width: 75rem;
+
+@mixin medium {
+  @media (min-width: $medium-width) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large-width) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width $xlarge-width) {
+    @content;
+  }
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex($width) {
+  -webkit-flex: $width;
+  -moz-flex: $width;
+  -ms-flex: $width;
+  flex: $width;
+}
+
+@mixin flex-grow($number) {
+  -webkit-flex-grow: $number;
+  -moz-flex-grow: $number;
+  -ms-flex-grow: $number;
+  flex-grow: $number;
+}
+
+@mixin flex-basis($number) {
+  -webkit-flex-basis: $number;
+  -moz-flex-basis: $number;
+  -ms-flex-basis: $number;
+  flex-basis: $number;
+  -ms-preferred-size: $number;
+}
+
+@mixin flex-start() {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: start;
+  text-align: start;
+}
+
+@mixin flex-center() {
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+}
+
+@mixin flex-end() {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: end;
+  text-align: end;
+}
+
+@mixin flex-top() {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+}
+
+@mixin flex-middle() {
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+@mixin flex-bottom() {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-align: end;
+}
+
+@mixin flex-around() {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute
+}
+
+@mixin flex-between() {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify
+}
+
+@mixin flex-order($number) {
+  -webkit-order: $number;
+  order: $number;
+  -ms-flex-order: $number;
+}
