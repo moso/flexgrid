@@ -8,6 +8,12 @@ No more floats! If a regular grid layout such as my own [K-grid] is based on bot
 A live demo is available here: [DEMO]
 
 ### Changelog
+**1.0.2 (2015-11-29)**
+- Added SCSS source and a few small fixes
+
+**1.0.1 (2015-09-27)**
+- Removed helper classes
+
 **1.0 (2015-06-23)**
 - Initial release
 
