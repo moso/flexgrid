@@ -1,3 +1,9 @@
+2.0.0 (2016-10-10)
+- Renamed some mixins, added new ones, added better descriptions on each mixin
+- Simplified mixins - they can now do more and have defaults
+- Added variables file for better modification
+- Added a grid generator for better automation
+
 1.0.2 (2015-11-29)
 Added SCSS source and a few small fixes
 

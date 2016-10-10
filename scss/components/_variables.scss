@@ -1,0 +1,47 @@
+// Flexgrid variables
+//-----------------------------
+
+
+// Flexgrid utilizes rems, and we want 1rem to be 16px
+$font-size-root:          16px !default;
+$font-size:               1rem !default; // 16px
+
+
+// Spacing - this is padding
+$space:                   1rem !default;
+$space-x:                 $space !default;
+$space-y:                 $space !default;
+$spacers: (
+  0: (x: 0, y: 0),
+  1: (x: $space-x, y: $space-y),
+  2: (x: ($space-x * 1.5), y: ($space-y * 1.5)),
+  3: (x: ($space-x * 3), y: ($space-y * 3))
+) !default;
+
+
+// Grid
+$cols:                    12 !default;   // Number of columns
+$space-between:           2rem !default; // 32px
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 34rem,
+  md: 48rem,
+  lg: 62rem,
+  xl: 75rem
+) !default;
+  // small:  544px
+  // medium: 768px
+  // large:  992px
+  // xlarge: 1200px
+
+$container-max-widths: (
+  sm: 36rem,
+  md: 45rem,
+  lg: 59rem,
+  xl: 72rem
+) !default;
+  // small:  576px
+  // medium: 720px
+  // large:  944px
+  // xlarge: 1152px

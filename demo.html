@@ -9,7 +9,7 @@
     <!-- HTML5 Shiv + Respond.js for IE>9 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://cdn.cloudcache.dk/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://cdn.cloudcache.dk/respons.js/1.4.2/respond.js"></script> 
+      <script src="https://cdn.cloudcache.dk/respons.js/1.4.2/respond.js"></script>
     <![endif]-->
   </head>
   <body>
@@ -18,12 +18,12 @@
         <div class="pad-me">
           <h1 class="h1-title">Flexgrid </h1>
         </div>
-        <div class="s12 xl">
+        <div class="xs-12">
           <h1>- a simple grid based on <span class="code">flexbox</span> layout</h1>
         </div>
       </div>
       <div class="row">
-        <p>No more floats! If a regular grid layout such as my own <a href="https://mdevdk.github.com/k-grid">K-grid</a> is based on both block and inline flow directions, the flexbox (or just flex) layout is based on "flex-flow directions". Thus <span class="code">float</span> and <span class="code">clear</span> have no effect. Using <span class="code">float</span> causes the <span class="code">display</span>-property to compute to <span class="code">block</span>. Using <span class="code">flexbox</span> also means less JavaScript! And as per K-grid standard, everything is responsive and stacks perfectly. <span class="hidden-m hidden-s">Try by resizing your browser or view this site from a mobile device or tablet.</span></p>
+        <p>No more floats! If a regular grid layout such as my own <a href="https://mdevdk.github.com/k-grid">K-grid</a> is based on both block and inline flow directions, the flexbox (or just flex) layout is based on "flex-flow directions". Thus <span class="code">float</span> and <span class="code">clear</span> have no effect. Using <span class="code">float</span> causes the <span class="code">display</span>-property to compute to <span class="code">block</span>. Using <span class="code">flexbox</span> also means less JavaScript! And as per K-grid standard, everything is responsive and stacks perfectly. <span class="hidden-sm hidden-xs">Try by resizing your browser or view this site from a mobile device or tablet.</span></p>
 
         <p><strong>Please note:</strong> flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. More info <a href="http://caniuse.com/#search=flexbox">here</a>.</p>
       </div>
@@ -37,11 +37,11 @@
         <p>Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.</p>
       </div>
       <div class="row">
-        <div class="s12 m12 l3 xl2 demo">column</div>
-        <div class="s6 m6 l6 xl8 demo">column</div>
-        <div class="s6 m6 l3 xl2 demo">column</div>
-        <div class="s12 m6 l6 xl8 demo">column</div>
-        <div class="s12 m6 l6 xl4 demo">column</div>
+        <div class="xs-12 md-12 lg-3 xl-2 demo">column</div>
+        <div class="xs-6 md-6 lg-6 xl-8 demo">column</div>
+        <div class="xs-6 md-6 lg-3 xl-2 demo">column</div>
+        <div class="xs-12 md-6 lg-6 xl-8 demo">column</div>
+        <div class="xs-12 md-6 lg-6 xl-4 demo">column</div>
       </div>
 
       <div class="row"><h3>Offsets</h3></div>
@@ -49,9 +49,9 @@
         <p>It's fairly easy to offset columns.</p>
       </div>
       <div class="row">
-        <div class="s-offset-9 s3 demo">offset</div>
-        <div class="s-offset-6 s6 demo">offset</div>
-        <div class="s-offset-3 s9 demo">offset</div>
+        <div class="xs-offset-9 xs-3 demo">offset</div>
+        <div class="xs-offset-6 xs-6 demo">offset</div>
+        <div class="xs-offset-3 xs-9 demo">offset</div>
       </div>
 
       <div class="row"><h3>Auto width</h3></div>
@@ -59,34 +59,34 @@
         <p>This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
       </div>
       <div class="row">
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">streeeeeeeetch</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">streeeeeeeetch</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
       </div>
 
       <div class="row"><h3>Justifying content: space-around</h3></div>
       <div class="row">
         <p>With <span class="code">space-around</span>, items are evenly distributed in the line with equal space around them.</p>
       </div>
-      <div class="row s-around">
-        <div class="s12 m6 l2 demo">around</div>
-        <div class="s12 m6 l2 demo">around</div>
-        <div class="s12 m6 l2 demo">around</div>
-        <div class="s12 m6 l2 demo">around</div>
+      <div class="row xs-around">
+        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs-12 md-6 lg-2 demo">around</div>
       </div>
 
       <div class="row"><h3>Justifying content: space-between</h3></div>
       <div class="row">
         <p><span class="code">space-between</span> distributes items in the line; first item is on the start line, last item on the end line.</p>
       </div>
-      <div class="row s-between">
-        <div class="s12 m6 l3 demo">between</div>
-        <div class="s12 m6 l3 demo">between</div>
-        <div class="s12 m6 l3 demo">between</div>
+      <div class="row xs-between">
+        <div class="xs-12 md-6 lg-3 demo">between</div>
+        <div class="xs-12 md-6 lg-3 demo">between</div>
+        <div class="xs-12 md-6 lg-3 demo">between</div>
       </div>
 
       <div class="row"><h3>Justifying content: start, center, end</h3></div>
@@ -95,31 +95,31 @@
         <span class="code">center</span>: tems are centered along the line.<br />
         <span class="code">end</span>: items are packed toward to end line.</p>
       </div>
-      <div class="row m-start">        
-        <div class="s12 m3 demo">start</div>
+      <div class="row md-start">
+        <div class="xs-12 md-3 demo">start</div>
       </div>
-      <div class="row m-center">
-        <div class="s12 m3 demo">center</div>
+      <div class="row md-center">
+        <div class="xs-12 md-3 demo">center</div>
       </div>
-      <div class="row m-end">
-        <div class="s12 m3 demo">end</div>
+      <div class="row md-end">
+        <div class="xs-12 md-3 demo">end</div>
       </div>
 
       <div class="row"><h3>Justifying content: top, middle, bottom</h3></div>
       <div class="row">
         <p>Vertically aligning items can be a pain. But not with <span class="code">flexbox</span>.</p>
       </div>
-      <div class="row s-top">        
-        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="s12 m6 demo">top</div>
+      <div class="row xs-top">
+        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs-12 md-6 demo">top</div>
       </div>
-      <div class="row s-middle">
-        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="s12 m6 demo">middle</div>
+      <div class="row xs-middle">
+        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs-12 md-6 demo">middle</div>
       </div>
-      <div class="row s-bottom">
-        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="s12 m6 demo">bottom</div>
+      <div class="row xs-bottom">
+        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs-12 md-6 demo">bottom</div>
       </div>
 
       <div class="row"><h3>Ordering</h3></div>
@@ -127,12 +127,12 @@
         <p>By default, items are laid out in the source order. However, the <span class="code">order</span>-property controls the order in which they appear in the container.</p>
       </div>
       <div class="row">
-        <div class="s12 m6 l demo">1</div>
-        <div class="s12 m6 l s-last demo">2</div>
-        <div class="s12 m6 l demo">3</div>
-        <div class="s12 m6 l demo">4</div>
-        <div class="s12 m6 l demo">5</div>
-        <div class="s12 m6 l s-first demo">6</div>
+        <div class="xs-12 md-6 lg-2 demo">1</div>
+        <div class="xs-12 md-6 lg-2 xs-last demo">2</div>
+        <div class="xs-12 md-6 lg-2 demo">3</div>
+        <div class="xs-12 md-6 lg-2 demo">4</div>
+        <div class="xs-12 md-6 lg-2 demo">5</div>
+        <div class="xs-12 md-6 lg-2 xs-first demo">6</div>
       </div>
 
       <div class="row"><h3>Reversing</h3></div>
@@ -140,12 +140,12 @@
         <p>Reversing is basically the same as <span class="code">direction: rtl</span>, just smarter. You no longer have to reverse the <span class="code">direction</span> inside the item for text to align properly.</p>
       </div>
       <div class="row reverse">
-        <div class="s12 m6 l demo">1</div>
-        <div class="s12 m6 l demo">2</div>
-        <div class="s12 m6 l demo">3</div>
-        <div class="s12 m6 l demo">4</div>
-        <div class="s12 m6 l demo">5</div>
-        <div class="s12 m6 l demo">6</div>
+        <div class="xs-12 md-6 lg-2 demo">1</div>
+        <div class="xs-12 md-6 lg-2 demo">2</div>
+        <div class="xs-12 md-6 lg-2 demo">3</div>
+        <div class="xs-12 md-6 lg-2 demo">4</div>
+        <div class="xs-12 md-6 lg-2 demo">5</div>
+        <div class="xs-12 md-6 lg-2 demo">6</div>
       </div>
     </div>
 
@@ -153,95 +153,95 @@
       <div class="row"><h2>.container-fluid</h2></div>
       <div class="row"><h3 class="title">Columns</h3></div>
       <div class="row">
-        <div class="s12 m12 l3 xl2 demo">column</div>
-        <div class="s6 m6 l6 xl8 demo">column</div>
-        <div class="s6 m6 l3 xl2 demo">column</div>
-        <div class="s12 m6 l6 xl8 demo">column</div>
-        <div class="s12 m6 l6 xl4 demo">column</div>
+        <div class="xs-12 m12 lg-3 xl-2 demo">column</div>
+        <div class="xs-6 md-6 lg-6 xl-8 demo">column</div>
+        <div class="xs-6 md-6 lg-3 xl-2 demo">column</div>
+        <div class="xs-12 md-6 lg-6 xl-8 demo">column</div>
+        <div class="xs-12 md-6 lg-6 xl-4 demo">column</div>
       </div>
 
       <div class="row"><h3>Offsets</h3></div>
       <div class="row">
-        <div class="s-offset-9 s3 demo">offset</div>
-        <div class="s-offset-6 s6 demo">offset</div>
-        <div class="s-offset-3 s9 demo">offset</div>
+        <div class="xs-offset-9 xs-3 demo">offset</div>
+        <div class="xs-offset-6 xs-6 demo">offset</div>
+        <div class="xs-offset-3 xs-9 demo">offset</div>
       </div>
 
       <div class="row"><h3>Auto width</h3></div>
       <div class="row">
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">streeeeeeeetch</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
-        <div class="s12 m6 l demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">streeeeeeeetch</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
+        <div class="xs-12 md-6 lg-1 demo">auto</div>
       </div>
 
       <div class="row"><h3>Justifying content: space-around</h3></div>
-      <div class="row s-around">
-        <div class="s12 m6 l2 demo">around</div>
-        <div class="s12 m6 l2 demo">around</div>
-        <div class="s12 m6 l2 demo">around</div>
-        <div class="s12 m6 l2 demo">around</div>
+      <div class="row xs-around">
+        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs-12 md-6 lg-2 demo">around</div>
       </div>
 
       <div class="row"><h3>Justifying content: space-between</h3></div>
-      <div class="row s-between">
-        <div class="s12 m6 l3 demo">between</div>
-        <div class="s12 m6 l3 demo">between</div>
-        <div class="s12 m6 l3 demo">between</div>
+      <div class="row xs-between">
+        <div class="xs-12 md-6 lg-3 demo">between</div>
+        <div class="xs-12 md-6 lg-3 demo">between</div>
+        <div class="xs-12 md-6 lg-3 demo">between</div>
       </div>
 
       <div class="row"><h3>Justifying content: start, center, end</h3></div>
-      <div class="row m-start">        
-        <div class="s12 m3 demo">start</div>
+      <div class="row md-start">
+        <div class="xs-12 md-3 demo">start</div>
       </div>
-      <div class="row m-center">
-        <div class="s12 m3 demo">center</div>
+      <div class="row md-center">
+        <div class="xs-12 md-3 demo">center</div>
       </div>
-      <div class="row m-end">
-        <div class="s12 m3 demo">end</div>
+      <div class="row md-end">
+        <div class="xs-12 md-3 demo">end</div>
       </div>
 
       <div class="row"><h3>Justifying content: top, middle, bottom</h3></div>
-      <div class="row s-top">        
-        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="s12 m6 demo">top</div>
+      <div class="row xs-top">
+        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs-12 md-6 demo">top</div>
       </div>
-      <div class="row s-middle">
-        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="s12 m6 demo">middle</div>
+      <div class="row xs-middle">
+        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs-12 md-6 demo">middle</div>
       </div>
-      <div class="row s-bottom">
-        <div class="s12 m6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="s12 m6 demo">bottom</div>
+      <div class="row xs-bottom">
+        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs-12 md-6 demo">bottom</div>
       </div>
 
       <div class="row"><h3>Ordering</h3></div>
       <div class="row">
-        <div class="s12 m6 l demo">1</div>
-        <div class="s12 m6 l s-last demo">2</div>
-        <div class="s12 m6 l demo">3</div>
-        <div class="s12 m6 l demo">4</div>
-        <div class="s12 m6 l demo">5</div>
-        <div class="s12 m6 l s-first demo">6</div>
+        <div class="xs-12 md-6 demo">1</div>
+        <div class="xs-12 md-6 xs-last demo">2</div>
+        <div class="xs-12 md-6 demo">3</div>
+        <div class="xs-12 md-6 demo">4</div>
+        <div class="xs-12 md-6 demo">5</div>
+        <div class="xs-12 md-6 xs-first demo">6</div>
       </div>
 
       <div class="row"><h3>Reversing</h3></div>
       <div class="row reverse">
-        <div class="s12 m6 l demo">1</div>
-        <div class="s12 m6 l demo">2</div>
-        <div class="s12 m6 l demo">3</div>
-        <div class="s12 m6 l demo">4</div>
-        <div class="s12 m6 l demo">5</div>
-        <div class="s12 m6 l demo">6</div>
+        <div class="xs-12 md-6 demo">1</div>
+        <div class="xs-12 md-6 demo">2</div>
+        <div class="xs-12 md-6 demo">3</div>
+        <div class="xs-12 md-6 demo">4</div>
+        <div class="xs-12 md-6 demo">5</div>
+        <div class="xs-12 md-6 demo">6</div>
       </div>
     </div>
 
     <footer class="container-fluid">
-      <div class="row m-center">
-        <div class="s12"><p>Made with <i class="mdi mdi-heart heart"></i> by <a href="https://moso.io">Morten S&oslash;rensen</a></p></div>
+      <div class="row md-center">
+        <div class="xs-12"><p>Made with <i class="mdi mdi-heart heart"></i> by <a href="https://moso.io">Morten S&oslash;rensen</a></p></div>
       </div>
     </footer>
   </body>

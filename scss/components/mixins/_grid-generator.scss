@@ -1,0 +1,68 @@
+@mixin make-columns($columns: $cols, $space: $space-between, $breakpoints: $grid-breakpoints) {
+  // Common properties for all breakpoints
+  %column {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner space via padding
+    padding-left: ($space / 2);
+    padding-right: ($space / 2);
+  }
+  $breakpoint-counter: 0;
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-counter: ($breakpoint-counter + 1);
+    @for $i from 1 through $columns {
+      .#{$breakpoint}-#{$i} {
+        @extend %column;
+      }
+    }
+    @include media-breakpoint-up($breakpoint) {
+      @for $i from 1 through $columns {
+        .#{$breakpoint}-#{$i} {
+          @include make-col-span($i, $columns);
+        }
+      }
+      @each $modifier in (pull, push) {
+        @for $i from 0 through $columns {
+          .#{$breakpoint}-#{$modifier}-#{$i} {
+            @include make-col-modifier($modifier, $i, $columns)
+          }
+        }
+      }
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        @if $breakpoint-counter != 1 or $i != 0 { // Avoid emitting useless .xs-offset-0
+          .#{$breakpoint}-offset-#{$i} {
+            @include make-col-modifier(offset, $i, $columns)
+          }
+        }
+      }
+    }
+  }
+
+  // Flex column reordering
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .#{$breakpoint}-first { @include flex-order(-1); }
+      .#{$breakpoint}-last  { @include flex-order(1); }
+    }
+  }
+
+  // Alignment for every column in row
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .#{$breakpoint}-all-top    { @include flex-align-items(flex-start); }
+      .#{$breakpoint}-all-center { @include flex-align-items(center); }
+      .#{$breakpoint}-all-bottom { @include flex-align-items(flex-end); }
+    }
+  }
+
+  // Alignment per column
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .#{$breakpoint}-top    { @include flex-align-self(flex-start); }
+      .#{$breakpoint}-center { @include flex-align-self(center); }
+      .#{$breakpoint}-bottom { @include flex-align-self(flex-end); }
+    }
+  }
+}

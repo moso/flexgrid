@@ -1,0 +1,35 @@
+{
+  "name": "flexgrid",
+  "version": "1.1.0",
+  "description": "A simple grid based on flexbox layout",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moso/flexgrid/flexgrid.git"
+  },
+  "keywords": [
+    "flex",
+    "flexbox",
+    "flexgrid",
+    "grid",
+    "css"
+  ],
+  "author": [
+    "Morten Sørensen (morten@moso.io)"
+  ],
+  "license": "MIT (https://github.com/moso/flexgrid/blob/master/LICENSE)",
+  "bugs": {
+    "url": "https://github.com/moso/flexgrid/issues"
+  },
+  "homepage": "https://flexgrid.moso.io"
+}
