@@ -1,8 +1,8 @@
 # Flexgrid - a simple grid based on flexbox layout
 
-No more floats! If a regular grid layout such as my own [K-grid] is based on both block and inline flow directions, the flexbox (or just flex) layout is based on "flex-flow directions". Thus `float` and `clear` have no effect. Using `float` causes the `display`-property to compute to `block`. Using `flexbox` also means less JavaScript! And as per K-grid standard, everything is responsive and stacks perfectly.
+No more floats! Regular grid layout is based on both block and inline flow directions, however, the flexbox (or just flex) layout is based on "flex-flow directions". Thus `float` and `clear` have no effect. Using `float` causes the `display`-property to compute to `block`. Using `flexbox` also means less JavaScript! Everything is, of course, responsive and stacks perfectly.
 
-**Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. More info [here].
+**Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid has many fallbacks included, so IE11 is safe. More info [here].
 
 ### Demo
 A live demo is available here: [DEMO]
