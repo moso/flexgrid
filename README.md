@@ -9,6 +9,8 @@ A live demo is available here: [DEMO]
 
 ### Changelog
 **2.0.0 (2016-10-10)**
+- Renamed column names for better migration
+- Added an extra class
 - Renamed some mixins, added new ones, added better descriptions on each mixin
 - Simplified mixins - they can now do more and have defaults
 - Added variables file for better modification
@@ -68,7 +70,23 @@ Reversing is basically the same as `direction: rtl`, just smarter. You no longer
 
 #### Demonstration of all these can be found via the demo link!
 
-[K-grid]:https://github.com/moso/k-grid
+### Editing the source
+It's easy to modify the source. Clone this repository or download the release, and edit away.
+Flexgrid comes with a `gulpfile` that can compile the source for you. To install its dependencies, you need to have **NodeJS** and `npm` installed.
+To install the gulp dependencies, you just run:
+```
+npm install
+```
+
+When you're done editing, you just run:
+```
+gulp scss
+```
+If you want to minify the CSS, you can run:
+```
+gulp css-ugly
+```
+
 [here]:http://caniuse.com/#search=flexbox
 [DEMO]:http://flexgrid.moso.io
 [Bootstrap]:http://getbootstrap.com

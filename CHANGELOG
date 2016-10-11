@@ -1,4 +1,6 @@
 2.0.0 (2016-10-10)
+- Renamed column names for better migration
+- Added an extra class
 - Renamed some mixins, added new ones, added better descriptions on each mixin
 - Simplified mixins - they can now do more and have defaults
 - Added variables file for better modification

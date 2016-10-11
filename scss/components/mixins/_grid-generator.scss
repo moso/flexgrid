@@ -8,15 +8,22 @@
     padding-left: ($space / 2);
     padding-right: ($space / 2);
   }
+
   $breakpoint-counter: 0;
   @each $breakpoint in map-keys($breakpoints) {
     $breakpoint-counter: ($breakpoint-counter + 1);
     @for $i from 1 through $columns {
+      .#{$breakpoint},
       .#{$breakpoint}-#{$i} {
         @extend %column;
       }
     }
     @include media-breakpoint-up($breakpoint) {
+      .#{$breakpoint} {
+        @include flex-grow(1);
+        @include flex-basis(0);
+        max-width: 100%;
+      }
       @for $i from 1 through $columns {
         .#{$breakpoint}-#{$i} {
           @include make-col-span($i, $columns);
@@ -51,18 +58,32 @@
   // Alignment for every column in row
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-up($breakpoint) {
-      .#{$breakpoint}-all-top    { @include flex-align-items(flex-start); }
-      .#{$breakpoint}-all-center { @include flex-align-items(center); }
-      .#{$breakpoint}-all-bottom { @include flex-align-items(flex-end); }
+      .#{$breakpoint}-top    { @include flex-align-items(flex-start); }
+      .#{$breakpoint}-middle { @include flex-align-items(center); }
+      .#{$breakpoint}-bottom { @include flex-align-items(flex-end); }
     }
   }
 
   // Alignment per column
   @each $breakpoint in map-keys($breakpoints) {
     @include media-breakpoint-up($breakpoint) {
-      .#{$breakpoint}-top    { @include flex-align-self(flex-start); }
-      .#{$breakpoint}-center { @include flex-align-self(center); }
-      .#{$breakpoint}-bottom { @include flex-align-self(flex-end); }
+      .#{$breakpoint}-start  { @include flex-justify-content(flex-start); }
+      .#{$breakpoint}-center { @include flex-justify-content(center); }
+      .#{$breakpoint}-end    { @include flex-justify-content(flex-end); }
+    }
+  }
+
+  // Space around
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .#{$breakpoint}-around { @include flex-justify-content(space-around); }
+    }
+  }
+
+  // Space between
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      .#{$breakpoint}-between { @include flex-justify-content(space-between); }
     }
   }
 }
