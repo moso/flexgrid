@@ -26,7 +26,7 @@ A live demo is available here: [DEMO]
 - Initial release
 
 ### Classes
-Flexgrid now has 5 classes, compared to 4 in v1. You might find these familiar, as these are resemble [Bootstrap]:
+Flexgrid now has 5 classes, compared to 4 in v1. You might find these familiar, as these resemble [Bootstrap]:
 - xs (xtra small - for mobile devices and small tablets)
 - sm (small - for large mobile devices and tablets)
 - md (medium - for tablets and very small laptops)
