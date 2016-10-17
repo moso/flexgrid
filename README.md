@@ -4,6 +4,8 @@ No more floats! Regular grid layout is based on both block and inline flow direc
 
 **Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid has many fallbacks included, so IE11 is safe. More info [here].
 
+Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com/getnano/nano-framework), where Flexgrid is the standard grid-system and provides a stable flexbox skeleton.
+
 ### Demo
 A live demo is available here: [DEMO]
 
