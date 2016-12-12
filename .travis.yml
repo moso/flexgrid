@@ -6,4 +6,4 @@ install:
   - npm install
   - npm install -g gulp
 
-script: gulp
+script: gulp scss
