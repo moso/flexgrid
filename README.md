@@ -12,6 +12,9 @@ Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com
 A live demo is available here: [DEMO]
 
 ### Changelog
+**2.0.1 (2016-12-12)**
+- Small non-code update.
+
 **2.0.0 (2016-10-10)**
 - Renamed column names for better migration
 - Added an extra class
