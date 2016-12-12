@@ -1,5 +1,5 @@
 {
-  "name": "flexgrid",
+  "name": "flexgrid.moso.io",
   "version": "2.0.0",
   "description": "A simple grid based on flexbox layout",
   "main": "gulpfile.js",
@@ -22,7 +22,8 @@
     "flexbox",
     "flexgrid",
     "grid",
-    "css"
+    "css",
+    "scss"
   ],
   "author": [
     "Morten Sørensen (morten@moso.io)"
