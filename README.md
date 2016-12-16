@@ -46,38 +46,187 @@ Flexgrid now has 5 classes, compared to 4 in v1. You might find these familiar, 
 
 The classes can be combined to create more dynamic and flexible layouts.
 
-**Pro tip**: Each class scales up, so if you wish to set the same widths for 'sm' and 'md', you only need to specify 'sm'.
+**Pro tip**: Each class scales up, so if you wish to set the same widths for `sm` and `md`, you only need to specify `sm`.
 
 ### .container and .container-fluid
 Flexgrid comes with responsive containers that boxes the content in which are controlled by `@media`-queries. These `@media`-queries trigger at the same widths defined by the [Bootstrap]-framework. However, as a small detail, Flexgrid bases its width-triggers on `rem` instead of `px`. This creates a much more fluid layout. While `em` is relative to the `font-size` of its direct or nearest parent, `rem` is only relative to the `html` (root) `font-size`. Flexgrid `font-size` is set to `16px`. There is also a fluid container that has no `@media`-queries.
 
+```html
+<!-- Container -->
+<div class="container">
+  ...
+</div>
+
+<!-- Container fluid -->
+<div class="container-fluid">
+  ...
+</div>
+```
+
 ### Columns
 Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.
+
+![columns](https://flexgrid.moso.io/img/columns.png)
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="md-12">.md-12</div>
+    <div class="md-11">.md-11</div>
+    <div class="md-1">.md-1</div>
+    ...
+    <div class="md-6">.md-6</div>
+    <div class="md-6">.md-6</div>
+    ...
+  </div>
+</div>
+```
 
 ### Offsets
 It's fairly easy to offset columns
 
+![offset](https://flexgrid.moso.io/img/offset.png)
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="xs-3 xs-offset-9">.offset-9</div>
+    <div class="xs-6 xs-offset-6">.offset-6</div>
+    <div class="xs-9 xs-offset-3">.offset-3</div>
+  </div>
+</div>
+```
+
 ### Auto width
 This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
+
+![auto](https://flexgrid.moso.io/img/auto.png)
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="md">Auto</div>
+    <div class="md">Auto</div>
+    <div class="md">Auto</div>
+    <div class="md">Streeeeeeetch</div>
+    <div class="md">Auto</div>
+    <div class="md">Auto</div>
+    <div class="md">Auto</div>
+  </div>
+</div>
+```
 
 ### Justifying content
 ##### space-around:
 With `space-around`, items are evenly distributed in the line with equal space around them.
+
+![space-around](https://flexgrid.moso.io/img/space-around.png)
+
+```html
+<div class="container">
+  <div class="row xs-around">
+    <div class="xs-12 md-6 lg-2">Around</div>
+    <div class="xs-12 md-6 lg-2">Around</div>
+    <div class="xs-12 md-6 lg-2">Around</div>
+  </div>
+</div>
+```
+
 ##### space-between:
 `space-between` distributes items in the line; first item is on the start line, last item on the end line.
-##### start, end, center
+
+![space-between](https://flexgrid.moso.io/img/space-between.png)
+
+```html
+<div class="container">
+  <div class="row xs-between">
+    <div class="xs-12 md-6 lg-3">Between</div>
+    <div class="xs-12 md-6 lg-3">Between</div>
+    <div class="xs-12 md-6 lg-3">Between</div>
+  </div>
+</div>
+```
+
+##### start, center, end
 - `start`: (default): items are packed toward the start line.
 - `center`: tems are centered along the line.
 - `end`: items are packed toward to end line.
 
+![justify-start-center-end](https://flexgrid.moso.io/img/justify-start-center-end.png)
+
+```html
+<div class="container">
+  <div class="row md-start">
+    <div class="xs-12 md-3">Start</div>
+  </div>
+  <div class="row md-center">
+    <div class="xs-12 md-3">Center</div>
+  </div>
+  <div class="row md-end">
+    <div class="xs-12 md-3">End</div>
+  </div>
+</div>
+```
+
 ##### top, middle, bottom
 Vertically aligning items can be a pain. But not with `flexbox`.
+
+![justify-top-middle-bottom](https://flexgrid.moso.io/img/justify-top-middle-bottom.png)
+
+```html
+<div class="container">
+  <div class="row xs-top">
+    <div class="xs-12 md-6">Lorem ipsum ...</div>
+    <div class="xs-12 md-6">Top</div>
+  </div>
+  <div class="row xs-middle">
+    <div class="xs-12 md-6">Lorem ipsum ...</div>
+    <div class="xs-12 md-6">Middle</div>
+  </div>
+  <div class="row xs-bottom">
+    <div class="xs-12 md-6">Lorem ipsum ...</div>
+    <div class="xs-12 md-6">Bottom</div>
+  </div>
+</div>
+```
+
+**Pro tip**: You can combine `<prefix>-center` and `<prefix>-middle` to perfectly center content on a page. No more `display: table;` on the outer and `display: table-cell; vertical-align: middle;` on the inner element, or even `position: absolute; translare: transformX(-50%); top: 50%;` to vertically and horizontally center content. Smart, huh?
 
 ### Ordering
 By default, items are laid out in the source order. However, the `order`-property controls the order in which they appear in the container.
 
+![ordering](https://flexgrid.moso.io/img/ordering.png)
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="xs-12 md-6 lg-2">1</div>
+    <div class="xs-12 md-6 lg-2 xs-last">2</div>
+    <div class="xs-12 md-6 lg-2">3</div>
+    <div class="xs-12 md-6 lg-2">4</div>
+    <div class="xs-12 md-6 lg-2">5</div>
+    <div class="xs-12 md-6 lg-2 xs-first">6</div>
+  </div>
+</div>
+```
+
 ### Reversing
 Reversing is basically the same as `direction: rtl`, just smarter. You no longer have to reverse the `direction` inside the item for text to align properly.
+
+![ordering-reverse](https://flexgrid.moso.io/img/ordering-reverse.png)
+
+```html
+<div class="container">
+  <div class="row reverse">
+    <div class="xs-12 md-6 lg-2">1</div>
+    <div class="xs-12 md-6 lg-2">2</div>
+    <div class="xs-12 md-6 lg-2">3</div>
+    <div class="xs-12 md-6 lg-2">4</div>
+    <div class="xs-12 md-6 lg-2">5</div>
+    <div class="xs-12 md-6 lg-2">6</div>
+  </div>
+</div>
+```
 
 #### Demonstration of all these can be found via the demo link!
 
