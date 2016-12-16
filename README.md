@@ -1,6 +1,6 @@
 # Flexgrid - a simple grid based on flexbox layout
 
-[![Build Status](https://travis-ci.org/moso/flexgrid.svg?branch=v2.0.0)](https://travis-ci.org/moso/flexgrid)
+[![Build Status](https://travis-ci.org/moso/flexgrid.svg?branch=master)](https://travis-ci.org/moso/flexgrid)
 
 No more floats! Regular grid layout is based on both block and inline flow directions, however, the flexbox (or just flex) layout is based on "flex-flow directions". Thus `float` and `clear` have no effect. Using `float` causes the `display`-property to compute to `block`. Using `flexbox` also means less JavaScript! Everything is, of course, responsive and stacks perfectly.
 
@@ -12,7 +12,7 @@ Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com
 A live demo is available here: [DEMO]
 
 ### Changelog
-**2.0.3 (2016-12-16)**
+**2.0.3, 2.0.4 (2016-12-16)**
 - Better documentation in `README.md`
 
 **2.0.2 (2016-12-16)**
@@ -131,6 +131,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
     <div class="xs-12 md-6 lg-2">Around</div>
     <div class="xs-12 md-6 lg-2">Around</div>
     <div class="xs-12 md-6 lg-2">Around</div>
+    <div class="xs-12 md-6 lg-2">Around</div>
   </div>
 </div>
 ```
@@ -193,7 +194,7 @@ Vertically aligning items can be a pain. But not with `flexbox`.
 </div>
 ```
 
-**Pro tip**: You can combine `<prefix>-center` and `<prefix>-middle` to perfectly center content on a page. No more `display: table;` on the outer and `display: table-cell; vertical-align: middle;` on the inner element, or even `position: absolute; translare: transformX(-50%); top: 50%;` to vertically and horizontally center content. Smart, huh?
+**Pro tip**: You can combine `<prefix>-center` and `<prefix>-middle` to perfectly center content on a page. No more `display: table;` on the outer and `display: table-cell; vertical-align: middle;` on the inner element, or even `position: absolute; translate: transformX(-50%); top: 50%;` to vertically and horizontally center content. Smart, huh?
 
 ### Ordering
 By default, items are laid out in the source order. However, the `order`-property controls the order in which they appear in the container.
