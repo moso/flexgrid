@@ -50,6 +50,13 @@ body {
   flex-wrap: wrap;
   margin-right: -1rem;
   margin-left: -1rem; }
+  .row.reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
 
 .xs,
 .xs-1,
