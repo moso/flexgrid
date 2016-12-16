@@ -12,6 +12,9 @@ Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com
 A live demo is available here: [DEMO]
 
 ### Changelog
+**2.0.3 (2016-12-16)**
+- Better documentation in `README.md`
+
 **2.0.2 (2016-12-16)**
 - Fixed reversing on row items
 - Fixed the documentation in the `demo.html` on reversing
