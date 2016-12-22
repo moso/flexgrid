@@ -22,10 +22,13 @@ npm install flexgrid.co
 
 Yarn:
 ```
-yarn install flexgrid.co
+yarn add flexgrid.co
 ```
 
 ### Changelog
+**2.0.6 (2016-12-22)**
+- Fixed a typo in the README regarding Yarn
+
 **2.0.5 (2016-12-22)**
 - Moved to our own domain, changes reflect this
 
