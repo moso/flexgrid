@@ -3,20 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta property="og:description" content="A simple grid based on flexbox layout">
-    <meta property="og:image" content="https://flexgrid.moso.io/og_image.png">
-    <meta property="og:image:secure_url" content="https://flexgrid.moso.io/og_image.png">
-    <meta property="og:image:width" content="700">
-    <meta property="og:image:height" content="500">
-    <meta property="og:title" content="Flexgrid">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flexgrid.moso.io">
     <meta name="description" content="A simple grid based on flexbox layout">
-    <meta name="author" content="Morten Sørensen (morten@moso.io)">
-    <meta name="theme-color" content="#2196f3">
     <title>Flexgrid demo</title>
-    <link rel="stylesheet" href="https://flexgrid.moso.io/css/flexgrid.min.css">
-    <link rel="stylesheet" href="https://flexgrid.moso.io/css/demo.css">
+    <link rel="stylesheet" href="https://flexgrid.co/css/flexgrid.min.css">
+    <link rel="stylesheet" href="https://flexgrid.co/css/demo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
@@ -24,10 +14,7 @@
     <div class="container">
       <div class="row">
         <div class="pad-me">
-          <h1 class="h1-title">Flexgrid </h1>
-        </div>
-        <div class="xs-12">
-          <h1>- a simple grid based on <span class="code">flexbox</span> layout</h1>
+          <h1 class="h1-title">Flexgrid - <span class="lowercase">a simple grid based on <span class="code">flexbox</span> layout</span></h1>
         </div>
       </div>
       <div class="row">
@@ -42,6 +29,16 @@
         <a class="btn" href="https://github.com/moso/flexgrid"><i class="mdi mdi-github-circle"></i> Download</a>
       </div>
 
+      <div class="row"><h2>Packages</h2></div>
+      <div class="row">
+        <p>If you want to download Flexgrid using your favorite package manager, you can install it with either <strong>NPM</strong> or <strong>Yarn</strong>, and <strong>Bower</strong>.</p>
+        <ul class="list-unstyled list-inline">
+          <li><pre class="code-inline">npm install <span class="code">flexgrid.moso.io</span></pre></li>
+          <li><pre class="code-inline">yarn install <span class="code">flexgrid.moso.io</span></pre></li>
+          <li><pre class="code-inline">bower install <span class="code">flexgrid.moso.io</span></pre></li>
+        </ul>
+      </div>
+
       <div class="row"><h2>.container</h2></div>
       <div class="row">
         <p>Flexgrid comes with responsive containers that boxes the content in which are controlled by <span class="code">@media</span>-queries. These <span class="code">@media</span>-queries trigger at the same widths defined by the <a href="http://getbootstrap.com">Bootstrap</a>-framework. However, as a small detail, Flexgrid bases its width-triggers on <span class="code">rem</span> instead of <span class="code">px</span>. This creates a much more fluid layout. While <span class="code">em</span> is relative to the <span class="code">font-size</span> of its direct or nearest parent, <span class="code">rem</span> is only relative to the <span class="code">html</span> (root) <span class="code">font-size</span>. Flexgrid <span class="code">font-size</span> is set to 16.</p>
@@ -49,16 +46,15 @@
       </div>
       <div class="row"><h3>Columns</h3></div>
       <div class="row">
-        <p>Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.</p>
-        <span>Flexgrid comes with 4 layout classes:
-          <ul>
-            <li>xs (xtra small - for mobile devices and small tablets)</li>
-            <li>sm (small - for large mobile devices and tablets)</li>
-            <li>md (medium - for tablets and very small laptops)</li>
-            <li>lg (large - for smaller laptops and -desktops)</li>
-            <li>xl (xlarge - for desktops)</li>
-          </ul>
-        </span>
+        <span>Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.</span>
+        <p>Flexgrid comes with 4 layout classes:</p>
+        <ul>
+          <li>xs (xtra small - for mobile devices and small tablets)</li>
+          <li>sm (small - for large mobile devices and tablets)</li>
+          <li>md (medium - for tablets and very small laptops)</li>
+          <li>lg (large - for smaller laptops and -desktops)</li>
+          <li>xl (xlarge - for desktops)</li>
+        </ul>
         <p>These classes can be combined to create dynamic and flexible layouts.</p>
         <p><strong>Pro tip:</strong> each class scales up, so if you wish to set the same widths for 'sm' and 'md', you only need to specify 'sm'.</p>
       </div>
