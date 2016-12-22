@@ -11,7 +11,24 @@ Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com
 ### Demo
 A live demo is available here: [DEMO]
 
+### Packages
+
+If you want to download Flexgrid using either **NPM** or **Yarn**.
+
+NPM:
+```
+npm install flexgrid.co
+```
+
+Yarn:
+```
+yarn install flexgrid.co
+```
+
 ### Changelog
+**2.0.5 (2016-12-22)**
+- Moved to our own domain, changes reflect this
+
 **2.0.3, 2.0.4 (2016-12-16)**
 - Better documentation in `README.md`
 
@@ -252,5 +269,5 @@ gulp css-ugly
 ```
 
 [here]:http://caniuse.com/#search=flexbox
-[DEMO]:http://flexgrid.moso.io
+[DEMO]:https://flexgrid.co
 [Bootstrap]:http://getbootstrap.com
