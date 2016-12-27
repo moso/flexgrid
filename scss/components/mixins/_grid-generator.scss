@@ -8,9 +8,7 @@
     padding-right: ($space / 2); // Inner space via padding
   }
 
-  //$breakpoint-counter: 0;
   @each $breakpoint in map-keys($breakpoints) {
-    //$breakpoint-counter: ($breakpoint-counter + 1);
 
     $prefix: breakpoint-prefix($breakpoint, $breakpoints);
 

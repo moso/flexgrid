@@ -1,2 +1,3 @@
-css/demo.css
 node_modules
+yarn.lock
+npm-debug.log

@@ -1,6 +1,6 @@
 {
-  "name": "flexgrid",
-  "version": "1.1.0",
+  "name": "flexgrid.co",
+  "version": "2.0.6",
   "description": "A simple grid based on flexbox layout",
   "main": "gulpfile.js",
   "dependencies": {},
@@ -22,7 +22,8 @@
     "flexbox",
     "flexgrid",
     "grid",
-    "css"
+    "css",
+    "scss"
   ],
   "author": [
     "Morten Sørensen (morten@moso.io)"
@@ -31,5 +32,5 @@
   "bugs": {
     "url": "https://github.com/moso/flexgrid/issues"
   },
-  "homepage": "https://flexgrid.moso.io"
+  "homepage": "https://flexgrid.co"
 }

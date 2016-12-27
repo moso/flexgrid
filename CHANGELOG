@@ -1,4 +1,22 @@
+2.0.6 (2016-12-22)
+- Fixed a typo in the README regarding Yarn
+
+2.0.5 (2016-12-22)
+- Moved to our own domain, changes reflect this
+
+2.0.3, 2.0.4 (2016-12-16)
+- Better documentation in README.md
+
+2.0.2 (2016-12-16)
+- Fixed reversing on row items
+- Fixed the documentation in the `demo.html` on reversing
+
+2.0.1 (2016-12-12)
+- Small non-code update
+
 2.0.0 (2016-10-10)
+- Renamed column names for better migration
+- Added an extra class
 - Renamed some mixins, added new ones, added better descriptions on each mixin
 - Simplified mixins - they can now do more and have defaults
 - Added variables file for better modification
