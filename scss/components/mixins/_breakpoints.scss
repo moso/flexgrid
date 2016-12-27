@@ -1,3 +1,29 @@
+@mixin ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+
+@mixin ascending-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+
 // Breakpoints are defined as a map of (name: minimum width), order from small to large:
 //
 //    (xs: 0, sm: 544px, md: 768px)
@@ -34,6 +60,17 @@
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-prefix(xs, (xs: 0, sm: 576px, md: 768px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-prefix(sm, (xs: 0, sm: 576px, md: 768px))
+//    "sm"
+@function breakpoint-prefix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == false, "", "#{$name}");
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
@@ -80,11 +117,5 @@
     @include media-breakpoint-down($upper, $breakpoints) {
       @content;
     }
-  }
-}
-
-@mixin media-breakpoint-value($number) {
-  @media (max-width: nth(nth($grid-breakpoints, $number), 2)) {
-    @content
   }
 }

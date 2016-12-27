@@ -11,18 +11,14 @@ $font-size:               1rem !default; // 16px
 $space:                   1rem !default;
 $space-x:                 $space !default;
 $space-y:                 $space !default;
-$spacers: (
-  0: (x: 0, y: 0),
-  1: (x: $space-x, y: $space-y),
-  2: (x: ($space-x * 1.5), y: ($space-y * 1.5)),
-  3: (x: ($space-x * 3), y: ($space-y * 3))
-) !default;
 
 
 // Grid
-$cols:                    12 !default;   // Number of columns
-$space-between:           2rem !default; // 32px
+$columns:                 12 !default;   // Number of columns
+$padding:                 ($space * 2) !default; // 32px
 
+
+// Grid breakpoints
 $grid-breakpoints: (
   xs: 0,
   sm: 34rem,
@@ -34,7 +30,11 @@ $grid-breakpoints: (
   // medium: 768px
   // large:  992px
   // xlarge: 1200px
+@include ascending($grid-breakpoints, "$grid-breakpoints");
+@include ascending-zero($grid-breakpoints);
 
+
+// Grid containers
 $container-max-widths: (
   sm: 36rem,
   md: 45rem,
@@ -45,3 +45,4 @@ $container-max-widths: (
   // medium: 720px
   // large:  944px
   // xlarge: 1152px
+@include ascending($container-max-widths, "$container-max-widths");
