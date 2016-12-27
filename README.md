@@ -4,7 +4,7 @@
 
 No more floats! Regular grid layout is based on both block and inline flow directions, however, the flexbox (or just flex) layout is based on "flex-flow directions". Thus `float` and `clear` have no effect. Using `float` causes the `display`-property to compute to `block`. Using `flexbox` also means less JavaScript! Everything is, of course, responsive and stacks perfectly.
 
-**Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid has many fallbacks included, so IE11 is safe. More info [here].
+**Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid has many fallbacks included, so IE11 should be safe. More info [here].
 
 Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com/getnano/nano-framework), where Flexgrid is the standard grid-system and provides a stable flexbox skeleton.
 
@@ -26,6 +26,13 @@ yarn add flexgrid.co
 ```
 
 ### Changelog
+**2.1.0 (2016-12-27)**
+- Reworked the grid generation by optimizing some variables and tweaking some mixins
+- Removed the breakpoint-counting and replaced it with a mixin that checks if it's not zero
+- Removed reversing on row items entirely
+- Optimized the gulpfile
+- More demo fixes, this time a lot
+
 **2.0.6 (2016-12-22)**
 - Fixed a typo in the README regarding Yarn
 

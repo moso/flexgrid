@@ -1,3 +1,10 @@
+2.1.0 (2016-12-27)
+- Reworked the grid generation by optimizing some variables and tweaking some mixins
+- Removed the breakpoint-counting and replaced it with a mixin that checks if it's not zero
+- Removed reversing on row items entirely
+- Optimized the gulpfile
+- More demo fixes, this time a lot
+
 2.0.6 (2016-12-22)
 - Fixed a typo in the README regarding Yarn
 
