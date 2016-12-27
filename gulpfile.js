@@ -9,6 +9,7 @@ gulp.task('scss', function() {
     return gulp.src("scss/flexgrid.scss")
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest("css"));
+    return stream;
 });
 
 
@@ -18,8 +19,14 @@ gulp.task('css-ugly', function() {
         .pipe(concat('flexgrid.min.css'))
         .pipe(gulp.dest("css"))
         .on('error', swallowError);
+    return stream;
 });
 
+gulp.task('watch', ['scss', 'css-ugly'], function() {
+    gulp.watch('./scss**/.scss', ['scss', 'css-ugly']);
+});
+
+gulp.task('default', ['scss', 'css-ugly']);
 
 function swallowError (error) {
 
