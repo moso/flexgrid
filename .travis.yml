@@ -6,4 +6,7 @@ install:
   - npm install
   - npm install -g gulp
 
-script: gulp scss
+script: gulp
+group: stable
+dist: trusty
+os: linux
