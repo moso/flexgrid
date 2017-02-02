@@ -1,6 +1,6 @@
 {
   "name": "flexgrid.co",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A simple grid based on flexbox layout",
   "main": "gulpfile.js",
   "dependencies": {},
