@@ -1,3 +1,6 @@
+2.1.1 (2017-02-02)
+- Added `max-width` to containers without `@media`-query
+
 2.1.0 (2016-12-27)
 - Reworked the grid generation by optimizing some variables and tweaking some mixins
 - Removed the breakpoint-counting and replaced it with a mixin that checks if it's not zero
