@@ -12,7 +12,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  max-width: 100%; }
   @media (min-width: 34rem) {
     .container {
       width: 36rem;
@@ -34,7 +35,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  max-width: 100%; }
 
 .row {
   display: -webkit-box;
