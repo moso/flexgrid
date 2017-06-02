@@ -1,6 +1,6 @@
 {
   "name": "flexgrid.co",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A simple grid based on flexbox layout",
   "scripts": {
     "compile": "cross-env NODE_ENV=development webpack --progress --hide-modules"
