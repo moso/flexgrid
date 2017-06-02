@@ -26,6 +26,9 @@ yarn add flexgrid.co
 ```
 
 ### Changelog
+**2.2.0 (2017-06-02)**
+- Ditched gulp for webpack done with Laravel Mix. See below for new instructions.
+
 **2.1.1 (2017-02-02)**
 - Added `max-width` to containers without `@media`-query
 
@@ -265,22 +268,21 @@ Reversing is basically the same as `direction: rtl`, just smarter. You no longer
 #### Demonstration of all these can be found via the demo link!
 
 ### Editing the source
-It's easy to modify the source. Clone this repository or download the release, and edit away.
-Flexgrid comes with a `gulpfile` that can compile the source for you. To install its dependencies, you need to have **NodeJS** and `npm` installed.
-To install the gulp dependencies, you just run:
+It's easy to modify the source. Clone this repository and edit away.
+Flexgrid comes with [webpack] in form of [Laravel Mix] that can compile the source for you. To install its dependencies, you need to have **NodeJS** and `npm` installed.
+To install the dependencies, you just run:
 ```
 npm install
 ```
 
 When you're done editing, you just run:
 ```
-gulp scss
+npm run compile
 ```
-If you want to minify the CSS, you can run:
-```
-gulp css-ugly
-```
+This will compile a regular `.css`-file, and a minified `.min.css`-file.
 
+[webpack]:https://webpackjs.org
+[Laravel Mix]:https://github.com/JeffreyWay/laravel-mix
 [here]:http://caniuse.com/#search=flexbox
 [DEMO]:https://flexgrid.co
 [Bootstrap]:http://getbootstrap.com

@@ -1,17 +1,14 @@
 {
   "name": "flexgrid.co",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "A simple grid based on flexbox layout",
-  "main": "gulpfile.js",
+  "scripts": {
+    "compile": "cross-env NODE_ENV=development webpack --progress --hide-modules"
+  },
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^2.0.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.2.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-watch": "^4.3.5"
+    "laravel-mix": "^0.12.1",
+    "minifier": "^0.8.1"
   },
   "repository": {
     "type": "git",
@@ -28,7 +25,7 @@
   "author": [
     "Morten Sørensen (morten@moso.io)"
   ],
-  "license": "MIT (https://github.com/moso/flexgrid/blob/master/LICENSE)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/moso/flexgrid/issues"
   },
