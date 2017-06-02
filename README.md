@@ -26,6 +26,9 @@ yarn add flexgrid.co
 ```
 
 ### Changelog
+**2.2.1 (2017-06-02)**
+- Updated Travis
+
 **2.2.0 (2017-06-02)**
 - Ditched gulp for webpack done with Laravel Mix. See below for new instructions.
 
