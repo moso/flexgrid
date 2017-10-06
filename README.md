@@ -26,6 +26,9 @@ yarn add flexgrid.co
 ```
 
 ### Changelog
+**2.2.2 (2017-10-06)**
+- Upgraded Mix
+
 **2.2.1 (2017-06-02)**
 - Updated Travis
 
