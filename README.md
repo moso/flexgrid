@@ -25,7 +25,17 @@ Yarn:
 yarn add flexgrid.co
 ```
 
+### Tailwind CSS
+Inspired by the [Tailwind CSS](https://tailwindcss.com)-syntax, there's also a Tailwind-version of Flexgrid. To use it, when you compile or import Flexgrid, set the `$enable-tailwind`-variable to `true`. You can do this either by editing `_variables.scss`, or overriding it in your own variables, as the variable has the `!default`-flag attached.
+
+If you don't know what Tailwind CSS is, or if you don't want to use it, simply ignore this as it's something you have to opt in to.
+
 ### Changelog
+**2.5.0 (2017-12-05)**
+- Upgraded dependencies
+- Added a new optional style with Tailwind CSS-syntax
+- Updated this README with Tailwind-syntax docs
+
 **2.2.2 (2017-10-06)**
 - Upgraded Mix
 
@@ -105,6 +115,15 @@ Flexgrid comes with responsive containers that boxes the content in which are co
 </div>
 ```
 
+###### Tailwind-syntax:
+
+```html
+<!-- Container fluid -->
+<div class="container:fluid">
+  ...
+</div>
+```
+
 ### Columns
 Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.
 
@@ -124,6 +143,22 @@ Flexgrid comes with columns with percent-based widths allow fluid resizing of co
 </div>
 ```
 
+###### Tailwind-syntax:
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="md:12">.md:12</div>
+    <div class="md:11">.md:11</div>
+    <div class="md:1">.md:1</div>
+    ...
+    <div class="md:6">.md:6</div>
+    <div class="md:6">.md:6</div>
+    ...
+  </div>
+</div>
+```
+
 ### Offsets
 It's fairly easy to offset columns
 
@@ -135,6 +170,18 @@ It's fairly easy to offset columns
     <div class="xs-3 xs-offset-9">.offset-9</div>
     <div class="xs-6 xs-offset-6">.offset-6</div>
     <div class="xs-9 xs-offset-3">.offset-3</div>
+  </div>
+</div>
+```
+
+###### Tailwind-syntax:
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="xs:3 xs:offset:9">.offset:9</div>
+    <div class="xs:6 xs:offset:6">.offset:6</div>
+    <div class="xs:9 xs:offset:3">.offset:3</div>
   </div>
 </div>
 ```
@@ -175,6 +222,19 @@ With `space-around`, items are evenly distributed in the line with equal space a
 </div>
 ```
 
+###### Tailwind-syntax:
+
+```html
+<div class="container">
+  <div class="row xs:around">
+    <div class="xs:12 md:6 lg:2">Around</div>
+    <div class="xs:12 md:6 lg:2">Around</div>
+    <div class="xs:12 md:6 lg:2">Around</div>
+    <div class="xs:12 md:6 lg:2">Around</div>
+  </div>
+</div>
+```
+
 ##### space-between:
 `space-between` distributes items in the line; first item is on the start line, last item on the end line.
 
@@ -186,6 +246,18 @@ With `space-around`, items are evenly distributed in the line with equal space a
     <div class="xs-12 md-6 lg-3">Between</div>
     <div class="xs-12 md-6 lg-3">Between</div>
     <div class="xs-12 md-6 lg-3">Between</div>
+  </div>
+</div>
+```
+
+###### Tailwind-syntax:
+
+```html
+<div class="container">
+  <div class="row xs:between">
+    <div class="xs:12 md:6 lg:3">Between</div>
+    <div class="xs:12 md:6 lg:3">Between</div>
+    <div class="xs:12 md:6 lg:3">Between</div>
   </div>
 </div>
 ```
@@ -207,6 +279,22 @@ With `space-around`, items are evenly distributed in the line with equal space a
   </div>
   <div class="row md-end">
     <div class="xs-12 md-3">End</div>
+  </div>
+</div>
+```
+
+###### Tailwind-syntax:
+
+```html
+<div class="container">
+  <div class="row md:start">
+    <div class="xs:12 md:3">Start</div>
+  </div>
+  <div class="row md:center">
+    <div class="xs:12 md:3">Center</div>
+  </div>
+  <div class="row md:end">
+    <div class="xs:12 md:3">End</div>
   </div>
 </div>
 ```
@@ -233,6 +321,25 @@ Vertically aligning items can be a pain. But not with `flexbox`.
 </div>
 ```
 
+###### Tailwind-syntax:
+
+```html
+<div class="container">
+  <div class="row xs:top">
+    <div class="xs:12 md:6">Lorem ipsum ...</div>
+    <div class="xs:12 md:6">Top</div>
+  </div>
+  <div class="row xs:middle">
+    <div class="xs:12 md:6">Lorem ipsum ...</div>
+    <div class="xs:12 md:6">Middle</div>
+  </div>
+  <div class="row xs:bottom">
+    <div class="xs:12 md:6">Lorem ipsum ...</div>
+    <div class="xs:12 md:6">Bottom</div>
+  </div>
+</div>
+```
+
 **Pro tip**: You can combine `<prefix>-center` and `<prefix>-middle` to perfectly center content on a page. No more `display: table;` on the outer and `display: table-cell; vertical-align: middle;` on the inner element, or even `position: absolute; translate: transformX(-50%); top: 50%;` to vertically and horizontally center content. Smart, huh?
 
 ### Ordering
@@ -253,20 +360,17 @@ By default, items are laid out in the source order. However, the `order`-propert
 </div>
 ```
 
-### Reversing
-Reversing is basically the same as `direction: rtl`, just smarter. You no longer have to reverse the `direction` inside the item for text to align properly.
-
-![ordering-reverse](https://flexgrid.moso.io/img/ordering-reverse.png)
+###### Tailwind-syntax:
 
 ```html
 <div class="container">
-  <div class="row reverse">
-    <div class="xs-12 md-6 lg-2">1</div>
-    <div class="xs-12 md-6 lg-2">2</div>
-    <div class="xs-12 md-6 lg-2">3</div>
-    <div class="xs-12 md-6 lg-2">4</div>
-    <div class="xs-12 md-6 lg-2">5</div>
-    <div class="xs-12 md-6 lg-2">6</div>
+  <div class="row">
+    <div class="xs:12 md:6 lg:2">1</div>
+    <div class="xs:12 md:6 lg:2 xs:last">2</div>
+    <div class="xs:12 md:6 lg:2">3</div>
+    <div class="xs:12 md:6 lg:2">4</div>
+    <div class="xs:12 md:6 lg:2">5</div>
+    <div class="xs:12 md:6 lg:2 xs:first">6</div>
   </div>
 </div>
 ```
