@@ -1,6 +1,6 @@
 {
   "name": "flexgrid.co",
-  "version": "2.2.2",
+  "version": "2.5.0",
   "description": "A simple grid based on flexbox layout",
   "scripts": {
     "compile": "NODE_ENV=development node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --progress --hide-modules"
