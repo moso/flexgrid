@@ -2,38 +2,44 @@
 // However, we need some basics first, to make the whole shebang work
 
 *, *:before, *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: $font-size-root;
+    font-size: $font-size-root;
 }
 
 body {
-  font-size: $font-size;
-  margin: 0;
+    font-size: $font-size;
+    margin: 0;
 }
 
 
 // Container
 // Common style for containers and applying the container-max-widths
 .container {
-  @include make-container();
-  @include make-container-max-widths();
+    @include make-container();
+    @include make-container-max-widths();
 }
 
 
 // Container fluid
 // Same as Container but without the max-widths
-.container-fluid {
-  @include make-container();
+@if $enable-tailwind {
+    .container\:fluid {
+        @include make-container();
+    }
+} @else {
+    .container-fluid {
+        @include make-container();
+    }
 }
 
 
 // Row
 // Contains the columns that flexes
 .row {
-  @include make-row();
+    @include make-row();
 }
 
 

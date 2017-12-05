@@ -1,83 +1,152 @@
 @mixin make-columns($cols: $columns, $space: $padding, $breakpoints: $grid-breakpoints) {
-  // Common properties for all breakpoints
-  %column {
-    position: relative;
-    min-height: 1px; // Prevent columns from collapsing when empty
-    width: 100%; // We set flex values further down
-    padding-left: ($space / 2); // Inner space via padding
-    padding-right: ($space / 2); // Inner space via padding
-  }
-
-  @each $breakpoint in map-keys($breakpoints) {
-
-    $prefix: breakpoint-prefix($breakpoint, $breakpoints);
-
-    @for $i from 1 through $cols {
-      .#{$prefix}-#{$i} {
-        @extend %column;
-      }
-    }
-    .#{$prefix} {
-      @extend %column;
+    // Common properties for all breakpoints
+    %column {
+        position: relative;
+        min-height: 1px; // Prevent columns from collapsing when empty
+        width: 100%; // We set flex values further down
+        padding-left: ($space / 2); // Inner space via padding
+        padding-right: ($space / 2); // Inner space via padding
     }
 
-    @include media-breakpoint-up($breakpoint) {
-      .#{$prefix} {
-        @include flex-basis(0);
-        @include flex-grow(1);
-        max-width: 100%;
-      }
+    @each $breakpoint in map-keys($breakpoints) {
 
-      @for $i from 1 through $cols {
-        .#{$prefix}-#{$i} {
-          @include make-col-span($i, $cols);
-        }
-      }
+        $prefix: breakpoint-prefix($breakpoint, $breakpoints);
 
-      @each $modifier in (pull, push) {
         @for $i from 1 through $cols {
-          .#{$prefix}-#{$modifier}-#{$i} {
-            @include make-col-modifier($modifier, $i, $cols)
-          }
+            @if $enable-tailwind {
+                .#{$prefix}\:#{$i} {
+                    @extend %column;
+                }
+            } @else {
+                .#{$prefix}-#{$i} {
+                    @extend %column;
+                }
+            }
         }
-      }
 
-      // `$cols - 1` because offsetting by the width of an entire row isn't possible
-      @for $i from 0 through ($cols - 1) {
-        //@if $breakpoint-counter != 1 or $i != 0 { // Avoid emitting useless .xs-offset-0
-        @if not ($prefix == "" and $i == 0) {
-          .#{$prefix}-offset-#{$i} {
-            @include make-col-modifier(offset, $i, $cols)
-          }
+        @if $enable-tailwind {
+           .#{$prefix},
+           .#{$prefix}\:auto {
+                @extend %column;
+            }
+        } @else {
+            .#{$prefix},
+            .#{$prefix}-auto {
+                @extend %column;
+            }
         }
-      }
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            .#{$prefix} {
+                @include flex-basis(0);
+                @include flex-grow(1);
+                max-width: 100%;
+            }
+
+            @if $enable-tailwind {
+                .#{$prefix}\:auto {
+                    @include flex-basis(0);
+                    @include flex-grow(0);
+                    max-width: none;
+                }
+            } @else {
+                .#{$prefix}-auto {
+                    @include flex-basis(0);
+                    @include flex-grow(0);
+                    max-width: none;
+                }
+            }
+
+            @for $i from 1 through $cols {
+                @if $enable-tailwind {
+                    .#{$prefix}\:#{$i} {
+                        @include make-col-span($i, $cols);
+                    }
+                } @else {
+                    .#{$prefix}-#{$i} {
+                        @include make-col-span($i, $cols);
+                    }
+                }
+            }
+
+            @each $modifier in (pull, push) {
+                @for $i from 1 through $cols {
+                    @if $enable-tailwind {
+                        .#{$prefix}\:#{$modifier}\:#{$i} {
+                            @include make-col-modifier($modifier, $i, $cols)
+                        }
+                    } @else {
+                        .#{$prefix}-#{$modifier}-#{$i} {
+                            @include make-col-modifier($modifier, $i, $cols)
+                        }
+                    }
+                }
+            }
+
+            // `$cols - 1` because offsetting by the width of an entire row isn't possible
+            @for $i from 0 through ($cols - 1) {
+                @if not ($prefix == "" and $i == 0) { // Avoid useless .offset-0
+                    @if $enable-tailwind {
+                        .#{$prefix}\:offset\:#{$i} {
+                            @include make-col-modifier(offset, $i, $cols)
+                        }
+                    } @else {
+                        .#{$prefix}-offset-#{$i} {
+                            @include make-col-modifier(offset, $i, $cols)
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 
-  @each $breakpoint in map-keys($breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
 
-    $prefix: breakpoint-prefix($breakpoint, $breakpoints);
+        $prefix: breakpoint-prefix($breakpoint, $breakpoints);
 
-    @include media-breakpoint-up($breakpoint) {
-      // Flex column ordering
-      .#{$prefix}-first { @include flex-order(-1); }
-      .#{$prefix}-last  { @include flex-order(1); }
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            // Flex column ordering
+            @if $enable-tailwind {
+                .#{$prefix}\:\first { @include flex-order(-1); }
+                .#{$prefix}\:\last  { @include flex-order(1); }
+            } @else {
+                .#{$prefix}-first { @include flex-order(-1); }
+                .#{$prefix}-last  { @include flex-order(1); }
+            }
 
-      // Flex alignment for every column in a row
-      .#{$prefix}-top    { @include flex-align-items(flex-start); }
-      .#{$prefix}-middle { @include flex-align-items(center); }
-      .#{$prefix}-bottom { @include flex-align-items(flex-end); }
+            // Flex alignment for every column in a row
+            @if $enable-tailwind {
+                .#{$prefix}\:\top    { @include flex-align-items(flex-start); }
+                .#{$prefix}\:\middle { @include flex-align-items(center); }
+                .#{$prefix}\:\bottom { @include flex-align-items(flex-end); }
+            } @else {
+                .#{$prefix}-top    { @include flex-align-items(flex-start); }
+                .#{$prefix}-middle { @include flex-align-items(center); }
+                .#{$prefix}-bottom { @include flex-align-items(flex-end); }
+            }
 
-      // Flex alignment per column
-      .#{$prefix}-start  { @include flex-justify-content(flex-start); }
-      .#{$prefix}-center { @include flex-justify-content(center); }
-      .#{$prefix}-end    { @include flex-justify-content(flex-end); }
+            // Flex alignment per column
+            @if $enable-tailwind {
+                .#{$prefix}\:\start  { @include flex-justify-content(flex-start); }
+                .#{$prefix}\:\center { @include flex-justify-content(center); }
+                .#{$prefix}\:\end    { @include flex-justify-content(flex-end); }
 
-      // Space around
-      .#{$prefix}-around { @include flex-justify-content(space-around); }
+                // Space around
+                .#{$prefix}\:\around { @include flex-justify-content(space-around); }
 
-      // Space between
-      .#{$prefix}-between { @include flex-justify-content(space-between); }
+                // Space between
+                .#{$prefix}\:\between { @include flex-justify-content(space-between); }
+            } @else {
+                .#{$prefix}-start  { @include flex-justify-content(flex-start); }
+                .#{$prefix}-center { @include flex-justify-content(center); }
+                .#{$prefix}-end    { @include flex-justify-content(flex-end); }
+
+                // Space around
+                .#{$prefix}-around { @include flex-justify-content(space-around); }
+
+                // Space between
+                .#{$prefix}-between { @include flex-justify-content(space-between); }
+            }
+        }
     }
-  }
 }

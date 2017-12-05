@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="A simple grid based on flexbox layout">
     <title>Flexgrid demo</title>
-    <link rel="stylesheet" href="https://flexgrid.co/css/flexgrid.min.css">
+    <link rel="stylesheet" href="https://flexgrid.co/css/flexgrid-tailwind.min.css">
     <link rel="stylesheet" href="https://flexgrid.co/css/demo.css">
     <script src="https://cdn.3up.dk/highlight.js@9.12.0"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -20,7 +20,7 @@
     </form>
     <div class="container">
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h1 class="h1-title">Flexgrid - <span class="lowercase">a simple grid based on <span class="code-highlight">flexbox</span> layout</span></h1>
           <p>No more floats! Regular grid layout is based on both block and inline flow directions, however, the flexbox (or just flex) layout is based on "flex-flow directions". Thus <span class="code-highlight">float</span> and <span class="code-highlight">clear</span> have no effect. Using <span class="code-highlight">float</span> causes the <span class="code-highlight">display</span>-property to compute to <span class="code-highlight">block</span>. Using <span class="code-highlight">flexbox</span> also means less JavaScript! Everything is, of course, responsive and stacks perfectly. <span class="hidden-sm hidden-xs">Try by resizing your browser or view this site from a mobile device or tablet.</span></p>
 
@@ -31,13 +31,13 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <a class="btn" href="https://github.com/moso/flexgrid"><i class="mdi mdi-github-circle"></i> Download</a>
         </div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h2>Packages</h2>
           <p>If you want to download Flexgrid using either <strong>NPM</strong>, or <strong>Yarn</strong>.</p>
           <ul class="list-unstyled list-inline">
@@ -48,16 +48,7 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
-          <h2>Tailwind CSS</h2>
-          <p>Inspired by the <a href="https://tailwindcss.com">Tailwind CSS</a>-syntax, there's also a <a href="index-tailwind.html">Tailwind version</a> of Flexgrid.</p>
-          <p>To use it, when you compile or import Flexgrid, set the <span class="code-highlight">$enable-tailwind</span>-variable to <span class="code-highlight">true</span>. You can do this either by editing <span class="code-highlight">_variables.scss</span>, or overriding it in your own variables, as the variable has the <span class="code-highlight">!default</span>-flag attached.</p>
-          <p>If you don't know what Tailwind CSS is, or if you don't want to use it, simply ignore this section as it's something you have to opt in to.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h2>.container</h2>
           <p>Flexgrid comes with responsive containers that boxes the content in which are controlled by <span class="code-highlight">@media</span>-queries. These <span class="code-highlight">@media</span>-queries trigger at the same widths defined by the <a href="http://getbootstrap.com">Bootstrap</a>-framework. However, as a small detail, Flexgrid bases its width-triggers on <span class="code-highlight">rem</span> instead of <span class="code-highlight">px</span>. This creates a much more fluid layout. While <span class="code-highlight">em</span> is relative to the <span class="code-highlight">font-size</span> of its direct or nearest parent, <span class="code-highlight">rem</span> is only relative to the <span class="code-highlight">html</span> (root) <span class="code-highlight">font-size</span>. Flexgrid <span class="code-highlight">font-size</span> is set to 16.</p>
           <p>There is also a fluid container that has no <span class="code-highlight">@media</span>-queries. Look further down for examples.</p>
@@ -65,7 +56,7 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Columns</h3>
           <p>Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.</p>
           <p>Flexgrid comes with 4 layout classes:</p>
@@ -82,43 +73,43 @@
       </div>
 
       <div class="row demo-row">
-        <div class="md-12 demo">.md-12</div>
-        <div class="md-11 demo">.md-11</div>
-        <div class="md-1 demo">.md-1</div>
-        <div class="md-10 demo">.md-10</div>
-        <div class="md-2 demo">.md-2</div>
-        <div class="md-9 demo">.md-9</div>
-        <div class="md-3 demo">.md-3</div>
-        <div class="md-8 demo">.md-8</div>
-        <div class="md-4 demo">.md-4</div>
-        <div class="md-7 demo">.md-7</div>
-        <div class="md-5 demo">.md-5</div>
-        <div class="md-6 demo">.md-6</div>
-        <div class="md-6 demo">.md-6</div>
-        <div class="md-5 demo">.md-5</div>
-        <div class="md-7 demo">.md-7</div>
-        <div class="md-4 demo">.md-4</div>
-        <div class="md-8 demo">.md-8</div>
-        <div class="md-3 demo">.md-3</div>
-        <div class="md-9 demo">.md-9</div>
-        <div class="md-2 demo">.md-2</div>
-        <div class="md-10 demo">.md-10</div>
-        <div class="md-1 demo">.md-1</div>
-        <div class="md-11 demo">.md-11</div>
-        <div class="md-12 demo">.md-12</div>
+        <div class="md:12 demo">.md:12</div>
+        <div class="md:11 demo">.md:11</div>
+        <div class="md:1 demo">.md:1</div>
+        <div class="md:10 demo">.md:10</div>
+        <div class="md:2 demo">.md:2</div>
+        <div class="md:9 demo">.md:9</div>
+        <div class="md:3 demo">.md:3</div>
+        <div class="md:8 demo">.md:8</div>
+        <div class="md:4 demo">.md:4</div>
+        <div class="md:7 demo">.md:7</div>
+        <div class="md:5 demo">.md:5</div>
+        <div class="md:6 demo">.md:6</div>
+        <div class="md:6 demo">.md:6</div>
+        <div class="md:5 demo">.md:5</div>
+        <div class="md:7 demo">.md:7</div>
+        <div class="md:4 demo">.md:4</div>
+        <div class="md:8 demo">.md:8</div>
+        <div class="md:3 demo">.md:3</div>
+        <div class="md:9 demo">.md:9</div>
+        <div class="md:2 demo">.md:2</div>
+        <div class="md:10 demo">.md:10</div>
+        <div class="md:1 demo">.md:1</div>
+        <div class="md:11 demo">.md:11</div>
+        <div class="md:12 demo">.md:12</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;md-12&quot;&gt;.md-12&lt;/div&gt;
-    &lt;div class=&quot;md-11&quot;&gt;.md-11&lt;/div&gt;
-    &lt;div class=&quot;md-1&quot;&gt;.md-1&lt;/div&gt;
+    &lt;div class=&quot;md:12&quot;&gt;.md:12&lt;/div&gt;
+    &lt;div class=&quot;md:11&quot;&gt;.md:11&lt;/div&gt;
+    &lt;div class=&quot;md:1&quot;&gt;.md:1&lt;/div&gt;
     ...
-    &lt;div class=&quot;md-6&quot;&gt;.md-6&lt;/div&gt;
-    &lt;div class=&quot;md-6&quot;&gt;.md-6&lt;/div&gt;
+    &lt;div class=&quot;md:6&quot;&gt;.md:6&lt;/div&gt;
+    &lt;div class=&quot;md:6&quot;&gt;.md:6&lt;/div&gt;
     ...
   &lt;/div&gt;
 &lt;/div&gt;</code>
@@ -127,26 +118,26 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Offsets</h3>
           <p>It's fairly easy to offset columns.</p>
         </div>
       </div>
 
       <div class="row demo-row">
-        <div class="xs-3 xs-offset-9 demo">offset-9</div>
-        <div class="xs-6 xs-offset-6 demo">offset-6</div>
-        <div class="xs-9 xs-offset-3 demo">offset-3</div>
+        <div class="xs:3 xs:offset:9 demo">offset:9</div>
+        <div class="xs:6 xs:offset:6 demo">offset:6</div>
+        <div class="xs:9 xs:offset:3 demo">offset:3</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;xs-3 xs-offset-9&quot;&gt;.offset-9&lt;/div&gt;
-    &lt;div class=&quot;xs-6 xs-offset-6&quot;&gt;.offset-6&lt;/div&gt;
-    &lt;div class=&quot;xs-9 xs-offset-3&quot;&gt;.offset-3&lt;/div&gt;
+    &lt;div class=&quot;xs:3 xs:offset:9&quot;&gt;.offset:9&lt;/div&gt;
+    &lt;div class=&quot;xs:6 xs:offset:6&quot;&gt;.offset:6&lt;/div&gt;
+    &lt;div class=&quot;xs:9 xs:offset:3&quot;&gt;.offset:3&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
           </pre>
@@ -154,7 +145,7 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Auto width</h3>
           <p>This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
         </div>
@@ -167,7 +158,7 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
@@ -181,27 +172,27 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Justifying content: space-around</h3>
           <p>With <span class="code-highlight">space-around</span>, items are evenly distributed in the line with equal space around them.</p>
         </div>
       </div>
 
       <div class="row xs-around demo-row">
-        <div class="xs-12 md-6 lg-2 demo">around</div>
-        <div class="xs-12 md-6 lg-2 demo">around</div>
-        <div class="xs-12 md-6 lg-2 demo">around</div>
-        <div class="xs-12 md-6 lg-2 demo">around</div>
+        <div class="xs:12 md:6 lg:2 demo">around</div>
+        <div class="xs:12 md:6 lg:2 demo">around</div>
+        <div class="xs:12 md:6 lg:2 demo">around</div>
+        <div class="xs:12 md:6 lg:2 demo">around</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row xs-around&quot;&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;Around&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;Around&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;Around&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;Around&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;Around&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;Around&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
           </pre>
@@ -209,26 +200,26 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Justifying content: space-between</h3>
           <p><span class="code-highlight">space-between</span> distributes items in the line; first item is on the start line, last item on the end line.</p>
         </div>
       </div>
 
       <div class="row xs-between demo-row">
-        <div class="xs-12 md-6 lg-3 demo">between</div>
-        <div class="xs-12 md-6 lg-3 demo">between</div>
-        <div class="xs-12 md-6 lg-3 demo">between</div>
+        <div class="xs:12 md:6 lg:3 demo">between</div>
+        <div class="xs:12 md:6 lg:3 demo">between</div>
+        <div class="xs:12 md:6 lg:3 demo">between</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row xs-between&quot;&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-3&quot;&gt;Between&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-3&quot;&gt;Between&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-3&quot;&gt;Between&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:3&quot;&gt;Between&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:3&quot;&gt;Between&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:3&quot;&gt;Between&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
           </pre>
@@ -236,7 +227,7 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Justifying content: start, center, end</h3>
           <p><span class="code-highlight">start</span>: (default): items are packed toward the start line.<br />
           <span class="code-highlight">center</span>: tems are centered along the line.<br />
@@ -244,28 +235,28 @@
         </div>
       </div>
 
-      <div class="row md-start demo-row">
-        <div class="xs-12 md-3 demo">start</div>
+      <div class="row md:start demo-row">
+        <div class="xs:12 md:3 demo">start</div>
       </div>
-      <div class="row md-center demo-row">
-        <div class="xs-12 md-3 demo">center</div>
+      <div class="row md:center demo-row">
+        <div class="xs:12 md:3 demo">center</div>
       </div>
-      <div class="row md-end demo-row">
-        <div class="xs-12 md-3 demo">end</div>
+      <div class="row md:end demo-row">
+        <div class="xs:12 md:3 demo">end</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
-  &lt;div class=&quot;row md-start&quot;&gt;
-    &lt;div class=&quot;xs-12 md-3&quot;&gt;Start&lt;/div&gt;
+  &lt;div class=&quot;row md:start&quot;&gt;
+    &lt;div class=&quot;xs:12 md:3&quot;&gt;Start&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;row md-center&quot;&gt;
-    &lt;div class=&quot;xs-12 md-3&quot;&gt;Center&lt;/div&gt;
+  &lt;div class=&quot;row md:center&quot;&gt;
+    &lt;div class=&quot;xs:12 md:3&quot;&gt;Center&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;row md-end&quot;&gt;
-    &lt;div class=&quot;xs-12 md-3&quot;&gt;End&lt;/div&gt;
+  &lt;div class=&quot;row md:end&quot;&gt;
+    &lt;div class=&quot;xs:12 md:3&quot;&gt;End&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
           </pre>
@@ -273,38 +264,38 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Justifying content: top, middle, bottom</h3>
         </div>
       </div>
-      <div class="row xs-top demo-row">
-        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="xs-12 md-6 demo">top</div>
+      <div class="row xs:top demo-row">
+        <div class="xs:12 md:6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs:12 md:6 demo">top</div>
       </div>
-      <div class="row xs-middle demo-row">
-        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="xs-12 md-6 demo">middle</div>
+      <div class="row xs:middle demo-row">
+        <div class="xs:12 md:6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs:12 md:6 demo">middle</div>
       </div>
-      <div class="row xs-bottom demo-row">
-        <div class="xs-12 md-6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
-        <div class="xs-12 md-6 demo">bottom</div>
+      <div class="row xs:bottom demo-row">
+        <div class="xs:12 md:6 demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eligendi itaque beatae voluptas. Facere adipisci nemo labore fugit illum exercitationem odio harum eveniet debitis reiciendis minus rerum molestiae, quia tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolore, deserunt iste ea quas praesentium maxime, laborum quos rem, sunt, sapiente ullam quaerat earum iusto cumque doloribus delectus fugiat tenetur.</div>
+        <div class="xs:12 md:6 demo">bottom</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
-  &lt;div class=&quot;row xs-top&quot;&gt;
-    &lt;div class=&quot;xs-12 md-6&quot;&gt;Lorem ipsum ...&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6&quot;&gt;Top&lt;/div&gt;
+  &lt;div class=&quot;row xs:top&quot;&gt;
+    &lt;div class=&quot;xs:12 md:6&quot;&gt;Lorem ipsum ...&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6&quot;&gt;Top&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;row xs-middle&quot;&gt;
-    &lt;div class=&quot;xs-12 md-6&quot;&gt;Lorem ipsum ...&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6&quot;&gt;Middle&lt;/div&gt;
+  &lt;div class=&quot;row xs:middle&quot;&gt;
+    &lt;div class=&quot;xs:12 md:6&quot;&gt;Lorem ipsum ...&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6&quot;&gt;Middle&lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;row xs-bottom&quot;&gt;
-    &lt;div class=&quot;xs-12 md-6&quot;&gt;Lorem ipsum ...&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6&quot;&gt;Bottom&lt;/div&gt;
+  &lt;div class=&quot;row xs:bottom&quot;&gt;
+    &lt;div class=&quot;xs:12 md:6&quot;&gt;Lorem ipsum ...&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6&quot;&gt;Bottom&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
           </pre>
@@ -312,97 +303,38 @@
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <p><strong>Pro tip</strong>: You can combine <span class="code-highlight">&lt;prefix&gt;-center</span> and <span class="code-highlight">&lt;prefix&gt;-middle</span> to perfectly center content on a page. No more <span class="code-highlight">display: table;</span> on the outer and <span class="code-highlight">display: table-cell; vertical-align: middle;</span> on the inner element, or even <span class="code-highlight">position: absolute; translate: transformX(-50%); top: 50%;</span> to vertically and horizontally center content. Smart, huh?</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <h3>Ordering</h3>
           <p>By default, items are laid out in the source order. However, the <span class="code-highlight">order</span>-property controls the order in which they appear in the container.</p>
         </div>
       </div>
 
       <div class="row demo-row">
-        <div class="xs-12 md-6 lg-2 demo">1</div>
-        <div class="xs-12 md-6 lg-2 xs-last demo">2</div>
-        <div class="xs-12 md-6 lg-2 demo">3</div>
-        <div class="xs-12 md-6 lg-2 demo">4</div>
-        <div class="xs-12 md-6 lg-2 demo">5</div>
-        <div class="xs-12 md-6 lg-2 xs-first demo">6</div>
+        <div class="xs:12 md:6 lg:2 demo">1</div>
+        <div class="xs:12 md:6 lg:2 xs:last demo">2</div>
+        <div class="xs:12 md:6 lg:2 demo">3</div>
+        <div class="xs:12 md:6 lg:2 demo">4</div>
+        <div class="xs:12 md:6 lg:2 demo">5</div>
+        <div class="xs:12 md:6 lg:2 xs:first demo">6</div>
       </div>
 
       <div class="row">
-        <div class="xs-12">
+        <div class="xs:12">
           <pre>
             <code class="html">&lt;div class=&quot;container&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;1&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2 xs-last&quot;&gt;2&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;3&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;4&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2&quot;&gt;5&lt;/div&gt;
-    &lt;div class=&quot;xs-12 md-6 lg-2 xs-first&quot;&gt;6&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code>
-          </pre>
-        </div>
-      </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="xs-12">
-          <h2>.container-fluid</h2>
-          <p>The fluid container is a responsive container that has no max-width or flex-basis.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="xs-12">
-          <h3 class="title">Columns</h3>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="md-12 demo">.md-12</div>
-        <div class="md-11 demo">.md-11</div>
-        <div class="md-1 demo">.md-1</div>
-        <div class="md-10 demo">.md-10</div>
-        <div class="md-2 demo">.md-2</div>
-        <div class="md-9 demo">.md-9</div>
-        <div class="md-3 demo">.md-3</div>
-        <div class="md-8 demo">.md-8</div>
-        <div class="md-4 demo">.md-4</div>
-        <div class="md-7 demo">.md-7</div>
-        <div class="md-5 demo">.md-5</div>
-        <div class="md-6 demo">.md-6</div>
-        <div class="md-6 demo">.md-6</div>
-        <div class="md-5 demo">.md-5</div>
-        <div class="md-7 demo">.md-7</div>
-        <div class="md-4 demo">.md-4</div>
-        <div class="md-8 demo">.md-8</div>
-        <div class="md-3 demo">.md-3</div>
-        <div class="md-9 demo">.md-9</div>
-        <div class="md-2 demo">.md-2</div>
-        <div class="md-10 demo">.md-10</div>
-        <div class="md-1 demo">.md-1</div>
-        <div class="md-11 demo">.md-11</div>
-        <div class="md-12 demo">.md-12</div>
-      </div>
-
-      <div class="row">
-        <div class="xs-12">
-          <pre>
-            <code class="html">&lt;div class=&quot;container-fluid&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;md-12&quot;&gt;.md-12&lt;/div&gt;
-    &lt;div class=&quot;md-11&quot;&gt;.md-11&lt;/div&gt;
-    &lt;div class=&quot;md-1&quot;&gt;.md-1&lt;/div&gt;
-    ...
-    &lt;div class=&quot;md-6&quot;&gt;.md-6&lt;/div&gt;
-    &lt;div class=&quot;md-6&quot;&gt;.md-6&lt;/div&gt;
-    ...
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2 xs:last&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2&quot;&gt;5&lt;/div&gt;
+    &lt;div class=&quot;xs:12 md:6 lg:2 xs:first&quot;&gt;6&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
           </pre>
@@ -410,9 +342,68 @@
       </div>
     </div>
 
+    <div class="container:fluid">
+      <div class="row">
+        <div class="xs:12">
+          <h2>.container-fluid</h2>
+          <p>The fluid container is a responsive container that has no max-width or flex-basis.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="xs:12">
+          <h3 class="title">Columns</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="md:12 demo">.md:12</div>
+        <div class="md:11 demo">.md:11</div>
+        <div class="md:1 demo">.md:1</div>
+        <div class="md:10 demo">.md:10</div>
+        <div class="md:2 demo">.md:2</div>
+        <div class="md:9 demo">.md:9</div>
+        <div class="md:3 demo">.md:3</div>
+        <div class="md:8 demo">.md:8</div>
+        <div class="md:4 demo">.md:4</div>
+        <div class="md:7 demo">.md:7</div>
+        <div class="md:5 demo">.md:5</div>
+        <div class="md:6 demo">.md:6</div>
+        <div class="md:6 demo">.md:6</div>
+        <div class="md:5 demo">.md:5</div>
+        <div class="md:7 demo">.md:7</div>
+        <div class="md:4 demo">.md:4</div>
+        <div class="md:8 demo">.md:8</div>
+        <div class="md:3 demo">.md:3</div>
+        <div class="md:9 demo">.md:9</div>
+        <div class="md:2 demo">.md:2</div>
+        <div class="md:10 demo">.md:10</div>
+        <div class="md:1 demo">.md:1</div>
+        <div class="md:11 demo">.md:11</div>
+        <div class="md:12 demo">.md:12</div>
+      </div>
+
+      <div class="row">
+        <div class="xs:12">
+          <pre>
+            <code class="html">&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;md:12&quot;&gt;.md:12&lt;/div&gt;
+    &lt;div class=&quot;md:11&quot;&gt;.md:11&lt;/div&gt;
+    &lt;div class=&quot;md:1&quot;&gt;.md:1&lt;/div&gt;
+    ...
+    &lt;div class=&quot;md:6&quot;&gt;.md:6&lt;/div&gt;
+    &lt;div class=&quot;md:6&quot;&gt;.md:6&lt;/div&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+        </div>
+      </div>
+    </div>
     <footer class="container" style="margin-top: 50px;">
-      <div class="row xs-center">
-        <div class="xs-12" style="text-align: center;"><p>Made with <i class="mdi mdi-heart heart"></i> by <a href="https://moso.io">Morten S&oslash;rensen</a>. <a href="https://github.com/moso">GitHub</a></p></div>
+      <div class="row xs:center">
+        <div class="xs:12" style="text-align: center;"><p>Made with <i class="mdi mdi-heart heart"></i> by <a href="https://moso.io">Morten S&oslash;rensen</a>. <a href="https://github.com/moso">GitHub</a></p></div>
       </div>
     </footer>
   </body>

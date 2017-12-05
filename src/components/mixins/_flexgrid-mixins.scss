@@ -4,11 +4,11 @@
 //
 // display: flex | inline-flex
 @mixin flexbox {
-  display: flex;
+    display: flex;
 }
 
 @mixin flexbox-inline {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 
@@ -21,7 +21,7 @@
 // Values: nowrap | wrap | wrap-reverse
 // Default: nowrap
 @mixin flex-wrap($value: nowrap) {
-  flex-wrap: $value;
+    flex-wrap: $value;
 }
 
 
@@ -34,7 +34,7 @@
 // Values: row | row-reverse | column | column-reverse
 // Default: row
 @mixin flex-direction($value: row) {
-  flex-direction: $value;
+    flex-direction: $value;
 }
 
 
@@ -47,7 +47,7 @@
 // Values: <flex-direction> | <flex-wrap>
 // Default: row nowrap
 @mixin flex-flow($values: (row nowrap)) {
-  flex-flow: $values;
+    flex-flow: $values;
 }
 
 
@@ -58,7 +58,7 @@
 //
 // Default: 0
 @mixin flex-grow($int: 0) {
-  flex-grow: $int;
+    flex-grow: $int;
 }
 
 
@@ -69,7 +69,7 @@
 //
 // Default: 1
 @mixin flex-shrink($int: 1) {
-  flex-shrink: $int;
+    flex-shrink: $int;
 }
 
 
@@ -80,7 +80,7 @@
 // Values: Like "width"
 // Default: auto
 @mixin flex-basis($value: auto) {
-  flex-basis: $value;
+    flex-basis: $value;
 }
 
 
@@ -96,17 +96,16 @@
 // Default: See individual properties (1 1 0).
 @mixin flex($flex-grow: 1, $flex-shrink: null, $flex-basis: null) {
 
-  // Sigh... Let the freaking fallback hell begin...
-  // Okay, set a variable to be used by box-flex properties
-  $flex-grow-boxflex: $flex-grow;
+    // Set a variable to be used by box-flex properties
+    $flex-grow-boxflex: $flex-grow;
 
-  // 'box-flex' only supports a flex-grow value so let's grab the
-  // first item in the list and just return that.
-  @if type-of($flex-grow) == 'list' {
-    $flex-grow-boxflex: nth($flex-grow, 1);
-  }
+    // 'box-flex' only supports a flex-grow value so let's grab the
+    // first item in the list and just return that.
+    @if type-of($flex-grow) == 'list' {
+        $flex-grow-boxflex: nth($flex-grow, 1);
+    }
 
-  flex: $flex-grow $flex-shrink $flex-basis;
+    flex: $flex-grow $flex-shrink $flex-basis;
 }
 
 
@@ -123,7 +122,7 @@
 // Values: flex-start | flex-end | center | baseline | stretch
 // Default: stretch
 @mixin flex-align-items($value: stretch) {
-  align-items: $value;
+    align-items: $value;
 }
 
 
@@ -134,7 +133,7 @@
 // Values: auto | flex-start | flex-end | center | baseline | stretch
 // Default: auto
 @mixin flex-align-self($value: auto) {
-  align-self: $value;
+    align-self: $value;
 }
 
 
@@ -152,7 +151,7 @@
 // Values: flex-start | flex-end | center | space-between | space-around
 // Default: flex-start
 @mixin flex-justify-content($value: flex-start) {
-  justify-content: $value;
+    justify-content: $value;
 }
 
 
@@ -166,7 +165,7 @@
 // Values: flex-start | flex-end | center | space-between | space-around | stretch
 // Default: stretch
 @mixin flex-align-content($value: stretch) {
-  align-content: $value;
+    align-content: $value;
 }
 
 
@@ -177,5 +176,5 @@
 //
 // Default: 0
 @mixin flex-order($int: 0) {
-  order: $int;
+    order: $int;
 }
