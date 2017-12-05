@@ -127,7 +127,7 @@ Flexgrid comes with responsive containers that boxes the content in which are co
 ### Columns
 Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.
 
-![columns](https://flexgrid.moso.io/img/columns.png)
+![columns](https://flexgrid.co/img/columns.png)
 
 ```html
 <div class="container">
@@ -162,7 +162,7 @@ Flexgrid comes with columns with percent-based widths allow fluid resizing of co
 ### Offsets
 It's fairly easy to offset columns
 
-![offset](https://flexgrid.moso.io/img/offset.png)
+![offset](https://flexgrid.co/img/offset.png)
 
 ```html
 <div class="container">
@@ -189,7 +189,7 @@ It's fairly easy to offset columns
 ### Auto width
 This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
 
-![auto](https://flexgrid.moso.io/img/auto.png)
+![auto](https://flexgrid.co/img/auto.png)
 
 ```html
 <div class="container">
@@ -209,7 +209,7 @@ This defines the ability for a flex item to grow if necessary. It accepts a unit
 ##### space-around:
 With `space-around`, items are evenly distributed in the line with equal space around them.
 
-![space-around](https://flexgrid.moso.io/img/space-around.png)
+![space-around](https://flexgrid.co/img/space-around.png)
 
 ```html
 <div class="container">
@@ -238,7 +238,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
 ##### space-between:
 `space-between` distributes items in the line; first item is on the start line, last item on the end line.
 
-![space-between](https://flexgrid.moso.io/img/space-between.png)
+![space-between](https://flexgrid.co/img/space-between.png)
 
 ```html
 <div class="container">
@@ -267,7 +267,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
 - `center`: tems are centered along the line.
 - `end`: items are packed toward to end line.
 
-![justify-start-center-end](https://flexgrid.moso.io/img/justify-start-center-end.png)
+![justify-start-center-end](https://flexgrid.co/img/justify-start-center-end.png)
 
 ```html
 <div class="container">
@@ -302,7 +302,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
 ##### top, middle, bottom
 Vertically aligning items can be a pain. But not with `flexbox`.
 
-![justify-top-middle-bottom](https://flexgrid.moso.io/img/justify-top-middle-bottom.png)
+![justify-top-middle-bottom](https://flexgrid.co/img/justify-top-middle-bottom.png)
 
 ```html
 <div class="container">
@@ -345,7 +345,7 @@ Vertically aligning items can be a pain. But not with `flexbox`.
 ### Ordering
 By default, items are laid out in the source order. However, the `order`-property controls the order in which they appear in the container.
 
-![ordering](https://flexgrid.moso.io/img/ordering.png)
+![ordering](https://flexgrid.co/img/ordering.png)
 
 ```html
 <div class="container">
