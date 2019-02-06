@@ -1,13 +1,14 @@
 {
-  "name": "flexgrid.co",
-  "version": "2.5.0",
+  "name": "flexgrid.io",
+  "version": "2.5.1",
   "description": "A simple grid based on flexbox layout",
   "scripts": {
-    "compile": "NODE_ENV=development node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js --progress --hide-modules"
+    "compile": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {},
   "devDependencies": {
-    "laravel-mix": "^1.6.2",
+    "cross-env": "^5.2.0",
+    "laravel-mix": "2.1.14",
     "minifier": "^0.8.1"
   },
   "repository": {
@@ -25,11 +26,11 @@
   "author": {
     "name": "Morten Sørensen",
     "email": "morten@moso.io",
-    "url": "https://flexgrid.co"
+    "url": "https://flexgrid.io"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/moso/flexgrid/issues"
   },
-  "homepage": "https://flexgrid.co"
+  "homepage": "https://flexgrid.io"
 }
