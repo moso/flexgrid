@@ -6,8 +6,6 @@ No more floats! Regular grid layout is based on both block and inline flow direc
 
 **Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid has many fallbacks included, so IE11 should be safe. More info [here].
 
-Flexgrid is an integral part of the upcoming [Nano Framework](https://github.com/getnano/nano-framework), where Flexgrid is the standard grid-system and provides a stable flexbox skeleton.
-
 ### Demo
 A live demo is available here: [DEMO]
 
@@ -17,12 +15,12 @@ If you want to download Flexgrid using either **NPM** or **Yarn**.
 
 NPM:
 ```
-npm install flexgrid.co
+npm install flexgrid.io
 ```
 
 Yarn:
 ```
-yarn add flexgrid.co
+yarn add flexgrid.io
 ```
 
 ### Tailwind CSS
@@ -31,6 +29,12 @@ Inspired by the [Tailwind CSS](https://tailwindcss.com)-syntax, there's also a T
 If you don't know what Tailwind CSS is, or if you don't want to use it, simply ignore this as it's something you have to opt in to.
 
 ### Changelog
+**2.5.1 (2019-02-06)**
+- Upgraded dependencies
+- As the project is moved to a new URL, temporary links to the old docs have been added
+- Old npm package deprecated
+- Preparation for new version with fancier docs
+
 **2.5.0 (2017-12-05)**
 - Upgraded dependencies
 - Added a new optional style with Tailwind CSS-syntax
@@ -127,7 +131,7 @@ Flexgrid comes with responsive containers that boxes the content in which are co
 ### Columns
 Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows.
 
-![columns](https://flexgrid.co/img/columns.png)
+![columns](https://flexgrid.io/old/img/columns.png)
 
 ```html
 <div class="container">
@@ -162,7 +166,7 @@ Flexgrid comes with columns with percent-based widths allow fluid resizing of co
 ### Offsets
 It's fairly easy to offset columns
 
-![offset](https://flexgrid.co/img/offset.png)
+![offset](https://flexgrid.io/old/img/offset.png)
 
 ```html
 <div class="container">
@@ -189,7 +193,7 @@ It's fairly easy to offset columns
 ### Auto width
 This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
 
-![auto](https://flexgrid.co/img/auto.png)
+![auto](https://flexgrid.io/old/img/auto.png)
 
 ```html
 <div class="container">
@@ -209,7 +213,7 @@ This defines the ability for a flex item to grow if necessary. It accepts a unit
 ##### space-around:
 With `space-around`, items are evenly distributed in the line with equal space around them.
 
-![space-around](https://flexgrid.co/img/space-around.png)
+![space-around](https://flexgrid.io/old/img/space-around.png)
 
 ```html
 <div class="container">
@@ -238,7 +242,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
 ##### space-between:
 `space-between` distributes items in the line; first item is on the start line, last item on the end line.
 
-![space-between](https://flexgrid.co/img/space-between.png)
+![space-between](https://flexgrid.io/old/img/space-between.png)
 
 ```html
 <div class="container">
@@ -267,7 +271,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
 - `center`: tems are centered along the line.
 - `end`: items are packed toward to end line.
 
-![justify-start-center-end](https://flexgrid.co/img/justify-start-center-end.png)
+![justify-start-center-end](https://flexgrid.io/old/img/justify-start-center-end.png)
 
 ```html
 <div class="container">
@@ -302,7 +306,7 @@ With `space-around`, items are evenly distributed in the line with equal space a
 ##### top, middle, bottom
 Vertically aligning items can be a pain. But not with `flexbox`.
 
-![justify-top-middle-bottom](https://flexgrid.co/img/justify-top-middle-bottom.png)
+![justify-top-middle-bottom](https://flexgrid.io/old/img/justify-top-middle-bottom.png)
 
 ```html
 <div class="container">
@@ -345,7 +349,7 @@ Vertically aligning items can be a pain. But not with `flexbox`.
 ### Ordering
 By default, items are laid out in the source order. However, the `order`-property controls the order in which they appear in the container.
 
-![ordering](https://flexgrid.co/img/ordering.png)
+![ordering](https://flexgrid.io/old/img/ordering.png)
 
 ```html
 <div class="container">
@@ -394,5 +398,5 @@ This will compile a regular `.css`-file, and a minified `.min.css`-file.
 [webpack]:https://webpackjs.org
 [Laravel Mix]:https://github.com/JeffreyWay/laravel-mix
 [here]:http://caniuse.com/#search=flexbox
-[DEMO]:https://flexgrid.co
+[DEMO]:https://flexgrid.io/old
 [Bootstrap]:http://getbootstrap.com
