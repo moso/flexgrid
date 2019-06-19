@@ -160,6 +160,17 @@
 }
 
 
+// Flexbox Justify Items
+//
+// Aligns flex items of the current flex line overriding the align-items value.
+//
+// Values: auto | flex-start | flex-end | center | baseline | stretch
+// Default: auto
+@mixin flex-justify-items($value: auto) {
+    justify-items: $value;
+}
+
+
 // Flexbox Align Content
 //
 // The 'align-content' property aligns a flex container's lines within the
