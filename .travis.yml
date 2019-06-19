@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "10"
+
+install:
+  - npm install
+
+script: npm run build
+group: stable
+dist: xenial
+os: linux
