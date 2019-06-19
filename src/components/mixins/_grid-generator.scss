@@ -1,0 +1,63 @@
+@mixin make-columns($cols: $columns, $space: $padding, $breakpoints: $grid-breakpoints) {
+    // Common properties for all breakpoints
+    %column {
+        position: relative;
+        min-height: 1px; // Prevent columns from collapsing when empty
+        width: 100%; // We set flex values further down
+        padding-left: ($space / 2); // Inner space via padding
+        padding-right: ($space / 2); // Inner space via padding
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+
+        $prefix: breakpoint-prefix($breakpoint, $breakpoints);
+
+        @for $i from 1 through $cols {
+            .#{$prefix}-#{$i} {
+                @extend %column;
+            }
+        }
+
+        .#{$prefix},
+        .#{$prefix}-auto {
+            @extend %column;
+        }
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            .#{$prefix} {
+                @include flex-basis(0);
+                @include flex-grow(1);
+                max-width: 100%;
+            }
+
+            .#{$prefix}-auto {
+                @include flex-basis(0);
+                @include flex-grow(0);
+                max-width: none;
+            }
+
+            @for $i from 1 through $cols {
+                .#{$prefix}-#{$i} {
+                    @include make-col-span($i, $cols);
+                }
+            }
+
+            @each $modifier in (pull, push) {
+                @for $i from 1 through $cols {
+                    .#{$prefix}-#{$modifier}-#{$i} {
+                        @include make-col-modifier($modifier, $i, $cols)
+                    }
+                }
+            }
+
+            // `$cols - 1` because offsetting by the width of an entire row isn't possible
+            @for $i from 0 through ($cols - 1) {
+                @if not ($prefix == "" and $i == 0) { // Avoid useless .offset-0
+                    .#{$prefix}-offset-#{$i} {
+                        @include make-col-modifier(offset, $i, $cols)
+                    }
+                }
+            }
+        }
+    }
+}
