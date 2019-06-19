@@ -1,0 +1,71 @@
+3.0.0 (2019-06-19)
+- Complete transition to webpack
+- Rewrite of the grid generator
+- Added `space-evenly` (note: no support in IE, `space-between` is used as fallback)
+- Rewrite of alignments
+- Added margin utilities
+- Ditched Tailwind syntax (use 2.x branch if you need it)
+- Discarded demo files - use the new documentation website at https://docs.flexgrid.io
+
+2.5.1 (2019-02-06)
+- Upgraded dependencies
+- As the project is moved to a new URL, temporary links to the old docs have been added
+- Old npm package deprecated
+- Preparation for new version with fancier docs
+
+2.5.0 (2017-12-05)
+- Upgraded dependencies
+- Added a new optional style with Tailwind CSS-syntax
+- Updated README with Tailwind-syntax docs
+
+2.2.2 (2017-10-06)
+- Upgraded Mix
+
+2.2.1 (2017-06-02)
+- Updated Travis
+
+2.2.0 (2017-06-02)
+- Ditched gulp for webpack done with Laravel Mix. See README for new instructions.
+
+2.1.1 (2017-02-02)
+- Added `max-width` to containers without `@media`-query
+
+2.1.0 (2016-12-27)
+- Reworked the grid generation by optimizing some variables and tweaking some mixins
+- Removed the breakpoint-counting and replaced it with a mixin that checks if it's not zero
+- Removed reversing on row items entirely
+- Optimized the gulpfile
+- More demo fixes, this time a lot
+
+2.0.6 (2016-12-22)
+- Fixed a typo in the README regarding Yarn
+
+2.0.5 (2016-12-22)
+- Moved to our own domain, changes reflect this
+
+2.0.3, 2.0.4 (2016-12-16)
+- Better documentation in README.md
+
+2.0.2 (2016-12-16)
+- Fixed reversing on row items
+- Fixed the documentation in the `demo.html` on reversing
+
+2.0.1 (2016-12-12)
+- Small non-code update
+
+2.0.0 (2016-10-10)
+- Renamed column names for better migration
+- Added an extra class
+- Renamed some mixins, added new ones, added better descriptions on each mixin
+- Simplified mixins - they can now do more and have defaults
+- Added variables file for better modification
+- Added a grid generator for better automation
+
+1.0.2 (2015-11-29)
+- Added SCSS source and a few small fixes
+
+1.0.1 (2015-09-27)
+- Removed helper classes
+
+1.0 (2015-06-23)
+- Initial release
