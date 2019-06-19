@@ -1,0 +1,17 @@
+@mixin make-utilities($breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $prefix: breakpoint-prefix($breakpoint, $breakpoints);
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            // Horizontal margin - x-axis, left, right
+            .#{$prefix}-mx-auto, .mx-auto { @include margin-x(auto); }
+            .#{$prefix}-mr-auto, .mr-auto { @include margin-x(right); }
+            .#{$prefix}-ml-auto, .ml-auto { @include margin-x(left); }
+
+            // Vertical margin - y-axis, top, bottom
+            .#{$prefix}-my-auto, .my-auto { @include margin-y(auto); }
+            .#{$prefix}-mt-auto, .mt-auto { @include margin-y(top); }
+            .#{$prefix}-mb-auto, .mb-auto { @include margin-y(bottom); }
+        }
+    }
+}
