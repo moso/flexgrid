@@ -1,0 +1,11 @@
+// This file imports all the mixins
+
+// Breakpoints
+@import 'mixins/breakpoints';
+
+// Layout
+@import 'mixins/flexgrid-mixins';
+@import 'mixins/alignment';
+@import 'mixins/utilities';
+@import 'mixins/grid-generator';
+@import 'mixins/grid';
