@@ -1,6 +1,13 @@
 // Flexgrid variables
 //-----------------------------
 
+// Margin utilities opt-in
+// If enabled, the margin utilities will be compiled, increasing the file size.
+//
+// Default: `false`.
+$enable-utils:    false !default;
+
+
 // Flexgrid utilizes rems, and we want 1rem to be 16px
 $font-size-root:  16px !default;
 $font-size:       1rem !default; // 16px
