@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Flexgrid v2.5.1 (https://flexgrid.io)
+ * Flexgrid v2.5.2 (https://flexgrid.io)
  * Copyright 2015-2017 Morten Sørensen (morten@moso.io)
  * Licensed under MIT (https://github.com/moso/flexgrid/blob/master/LICENSE)
  */
@@ -29,7 +29,7 @@ body {
       width: 45rem; } }
   @media (min-width: 62rem) {
     .container {
-      width: 59rem; } }
+      width: 60rem; } }
   @media (min-width: 75rem) {
     .container {
       width: 72rem; } }
