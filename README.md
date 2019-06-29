@@ -29,6 +29,9 @@ Inspired by the [Tailwind CSS](https://tailwindcss.com)-syntax, there's also a T
 If you don't know what Tailwind CSS is, or if you don't want to use it, simply ignore this as it's something you have to opt in to.
 
 ### Changelog
+**2.5.2 (2019-06-29)**
+- Fixed breakpoints and container max-widths on `sm`-breakpoints
+
 **2.5.1 (2019-02-06)**
 - Upgraded dependencies
 - As the project is moved to a new URL, temporary links to the old docs have been added
