@@ -27,12 +27,12 @@ $padding:         ($space * 2) !default; // 2rem/32px
 // Grid breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 34rem,
+  sm: 36rem,
   md: 48rem,
   lg: 62rem,
   xl: 75rem
 ) !default;
-  // small:  544px
+  // small:  576px
   // medium: 768px
   // large:  992px
   // xlarge: 1200px
@@ -42,12 +42,12 @@ $grid-breakpoints: (
 
 // Grid containers
 $container-max-widths: (
-  sm: 36rem,
+  sm: 34rem,
   md: 45rem,
-  lg: 59rem,
+  lg: 60rem,
   xl: 72rem
 ) !default;
-  // small:  576px
+  // small:  544px
   // medium: 720px
   // large:  944px
   // xlarge: 1152px
