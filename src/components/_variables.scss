@@ -32,7 +32,7 @@ $grid-breakpoints: (
   lg: 62rem,
   xl: 75rem
 ) !default;
-  // small:  544px
+  // small:  576px
   // medium: 768px
   // large:  992px
   // xlarge: 1200px
@@ -44,11 +44,11 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 36rem,
   md: 45rem,
-  lg: 59rem,
+  lg: 60rem,
   xl: 72rem
 ) !default;
-  // small:  576px
+  // small:  544px
   // medium: 720px
-  // large:  944px
+  // large:  960px
   // xlarge: 1152px
 @include ascending($container-max-widths, "$container-max-widths");
