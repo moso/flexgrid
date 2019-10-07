@@ -109,6 +109,25 @@
 }
 
 
+// Flexbox Align Content
+//
+// The 'align-content' property aligns a flex container's lines within the
+// flex container when there is extra space in the cross-axis, similar to
+// how 'justify-content' aligns individual items within the main-axis. Note,
+// this property has no effect when the flexbox has only a single line.
+//
+// Values: flex-start | flex-end | center | space-between | space-around | stretch | space-evenly
+// Default: stretch
+@mixin flex-align-content($value: stretch) {
+    @if $value == space-evenly {
+        align-content: space-evenly;
+        align-content: space-between;
+    } @else {
+        align-content: $value;
+    }
+}
+
+
 // Flexbox Align Items
 //
 // Flex items can be aligned in the cross axis of the current line of the
@@ -156,36 +175,6 @@
         justify-content: $value;
     } @else {
         justify-content: $value;
-    }
-}
-
-
-// Flexbox Justify Items
-//
-// Aligns flex items of the current flex line overriding the align-items value.
-//
-// Values: auto | flex-start | flex-end | center | baseline | stretch
-// Default: auto
-@mixin flex-justify-items($value: auto) {
-    justify-items: $value;
-}
-
-
-// Flexbox Align Content
-//
-// The 'align-content' property aligns a flex container's lines within the
-// flex container when there is extra space in the cross-axis, similar to
-// how 'justify-content' aligns individual items within the main-axis. Note,
-// this property has no effect when the flexbox has only a single line.
-//
-// Values: flex-start | flex-end | center | space-between | space-around | stretch | space-evenly
-// Default: stretch
-@mixin flex-align-content($value: stretch) {
-    @if $value == space-evenly {
-        align-content: space-evenly;
-        align-content: space-between;
-    } @else {
-        align-content: $value;
     }
 }
 
