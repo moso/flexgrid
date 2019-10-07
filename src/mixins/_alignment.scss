@@ -8,35 +8,35 @@
             .#{$prefix}-first { @include flex-order(-1); }
             .#{$prefix}-last  { @include flex-order(1); }
 
-            // Flex alignment for every column in a row
-            .#{$prefix}-align-items-stretch  { @include flex-align-items(stretch); }
-            .#{$prefix}-align-items-start    { @include flex-align-items(flex-start); }
-            .#{$prefix}-align-items-center   { @include flex-align-items(center); }
-            .#{$prefix}-align-items-end      { @include flex-align-items(flex-end); }
+            // Align content - controlling how lines are positioned in multi-line flex containers
+            .#{$prefix}-content-start   { @include flex-align-content(flex-start); }
+            .#{$prefix}-content-center  { @include flex-align-content(center); }
+            .#{$prefix}-content-end     { @include flex-align-content(flex-end); }
+            .#{$prefix}-content-around  { @include flex-align-content(space-around); }
+            .#{$prefix}-content-between { @include flex-align-content(space-between); }
+            .#{$prefix}-content-evenly  { @include flex-align-content(space-evenly); }
 
-            .#{$prefix}-justify-content-start   { @include flex-justify-content(flex-start); }
-            .#{$prefix}-justify-content-center  { @include flex-justify-content(center); }
-            .#{$prefix}-justify-content-end     { @include flex-justify-content(flex-end); }
-            .#{$prefix}-justify-content-left    { @include flex-justify-content(left); }
-            .#{$prefix}-justify-content-right   { @include flex-justify-content(right); }
-            .#{$prefix}-justify-content-around  { @include flex-justify-content(space-around); }
-            .#{$prefix}-justify-content-between { @include flex-justify-content(space-between); }
-            .#{$prefix}-justify-content-evenly  { @include flex-justify-content(space-evenly); }
+            // Align items - controlling how flex items are positioned along a container's cross axis
+            .#{$prefix}-items-stretch  { @include flex-align-items(stretch); }
+            .#{$prefix}-items-start    { @include flex-align-items(flex-start); }
+            .#{$prefix}-items-center   { @include flex-align-items(center); }
+            .#{$prefix}-items-end      { @include flex-align-items(flex-end); }
+            .#{$prefix}-items-baseline { @include flex-align-items(baseline); }
 
-            // Flex alignment per column when direction is column
-            .#{$prefix}-align-content-start   { @include flex-align-content(flex-start); }
-            .#{$prefix}-align-content-center  { @include flex-align-content(center); }
-            .#{$prefix}-align-content-end     { @include flex-align-content(flex-end); }
-            .#{$prefix}-align-content-left    { @include flex-align-content(left); }
-            .#{$prefix}-align-content-right   { @include flex-align-content(right); }
-            .#{$prefix}-align-content-around  { @include flex-align-content(space-around); }
-            .#{$prefix}-align-content-between { @include flex-align-content(space-between); }
-            .#{$prefix}-align-content-evenly  { @include flex-align-content(space-evenly); }
+            // Align self - controlling how an individual flex item is positioned along its container's cross axis
+            .#{$prefix}-self-auto    { @include flex-align-self(auto); }
+            .#{$prefix}-self-start   { @include flex-align-self(flex-start); }
+            .#{$prefix}-self-center  { @include flex-align-self(center); }
+            .#{$prefix}-self-end     { @include flex-align-self(flex-end); }
+            .#{$prefix}-self-stretch { @include flex-align-self(stretch); }
 
-            .#{$prefix}-justify-items-stretch  { @include flex-justify-items(stretch); }
-            .#{$prefix}-justify-items-start    { @include flex-justify-items(flex-start); }
-            .#{$prefix}-justify-items-center   { @include flex-justify-items(center); }
-            .#{$prefix}-justify-items-end      { @include flex-justify-items(flex-end); }
+            // Justify content - controlling how flex items are positioned along a container's main axis
+            .#{$prefix}-justify-start   { @include flex-justify-content(flex-start); }
+            .#{$prefix}-justify-center  { @include flex-justify-content(center); }
+            .#{$prefix}-justify-end     { @include flex-justify-content(flex-end); }
+            .#{$prefix}-justify-around  { @include flex-justify-content(space-around); }
+            .#{$prefix}-justify-between { @include flex-justify-content(space-between); }
+            .#{$prefix}-justify-evenly  { @include flex-justify-content(space-evenly); }
         }
     }
 }
