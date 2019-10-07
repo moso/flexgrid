@@ -8,9 +8,10 @@ No more floats! Regular grid layout is based on both block and inline flow direc
 
 ### Changelog
 
-**3.0.0 (06-19-2019)**
+**3.0.0 (2019-10-07)**
 - Complete transition to webpack
 - Rewrite of the grid generator
+- Simplified alignment class names
 - Added margin utilities
 - Added `space-evenly` (note: no support in IE)
 - Ditched Tailwind syntax (use 2.x branch if you need it)

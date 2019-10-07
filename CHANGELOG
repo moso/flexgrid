@@ -1,4 +1,4 @@
-3.0.0 (2019-06-19)
+3.0.0 (2019-10-07)
 - Complete transition to webpack
 - Rewrite of the grid generator
 - Added `space-evenly` (note: no support in IE, `space-between` is used as fallback)
