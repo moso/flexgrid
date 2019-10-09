@@ -1,3 +1,5 @@
+// Ascending
+// Used to evaluate Sass maps like `$grid-breakpoints`
 @mixin ascending($map, $map-name) {
     $prev-key: null;
     $prev-num: null;
@@ -6,15 +8,17 @@
         @if $prev-num == null {
             // Do nothing
         } @else if not comparable($prev-num, $num) {
-            @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+            @warn "Potentially error in value for #{$map-name}: The map must be in ascending order, but the key '#{$key}' has the value #{$num} of which unit makes it incomparable to #{$prev-num}, the value of the previous key was '#{$prev-key}' !";
         } @else if $prev-num >= $num {
-            @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+            @warn "Error in value for #{$map-name}: The map must be in ascending order, but the key '#{$key}' has value #{$num} which is not greater than #{$prev-num}, the value of the previous key was '#{$prev-key}' !";
         }
         $prev-key: $key;
         $prev-num: $num;
     }
 }
 
+// Ascending zero
+// The min-width of the lowest breakpoint should start at 0
 @mixin ascending-zero($map) {
     $values: map-values($map);
     $first-value: nth($values, 1);
