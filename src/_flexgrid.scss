@@ -1,19 +1,17 @@
 // This file essentially creates the grid
 // However, we need some basics first, to make the whole shebang work
 
-*, *:before, *:after {
+// Universal box-sizing
+// https://css-tricks.com/almanac/properties/b/box-sizing/
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
+// Using rem for global sizing, thus we set `font-size` for `html`
+// https://css-tricks.com/rem-global-em-local/
 html {
     font-size: $font-size-root;
 }
-
-body {
-    margin: 0;
-    font-size: $font-size;
-}
-
 
 // Container
 // Common style for containers and applying the container-max-widths
