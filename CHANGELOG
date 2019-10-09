@@ -1,11 +1,14 @@
 3.0.0 (2019-10-07)
 - Complete transition to webpack
 - Rewrite of the grid generator
+- Simplified alignment class names
+- Added optional margin utilities
 - Added `space-evenly` (note: no support in IE, `space-between` is used as fallback)
-- Rewrite of alignments
-- Added margin utilities
 - Ditched Tailwind syntax (use 2.x branch if you need it)
-- Discarded demo files - use the new documentation website at https://docs.flexgrid.io
+- Discarded demo files - use the new documentation website
+
+2.5.2 (2019-06-29)
+- Fixed breakpoints and container max-widths on `.sm`-breakpoints
 
 2.5.1 (2019-02-06)
 - Upgraded dependencies
