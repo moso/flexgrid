@@ -8,19 +8,20 @@ No more floats! Regular grid layout is based on both block and inline flow direc
 
 ### Changelog
 
-**3.0.0 (2019-10-07)**
+**3.0.0 (2019-10-09)**
 - Complete transition to webpack
 - Rewrite of the grid generator
 - Simplified alignment class names
-- Added margin utilities
-- Added `space-evenly` (note: no support in IE)
+- Added optional margin utilities
+- Added `space-evenly` (note: no support in IE, `space-between` is used as fallback)
 - Ditched Tailwind syntax (use 2.x branch if you need it)
+- Discarded demo files - use the new documentation website
 
 Older changelogs can be found in the 2.x branch.
 
 ## Documentation
 
-You find everything fully documented at the [Docs page](https://docs.flexgrid.io).
+You find everything fully documented at the new [Docs page](https://docs.flexgrid.io).
 
 ## Packages
 
@@ -28,7 +29,7 @@ Use your favorite package manager to install Flexgrid
 
 NPM:
 ```bash
-$ npm install flexgrid.io
+$ npm install --save flexgrid.io
 ```
 
 Yarn:
@@ -41,11 +42,29 @@ You can then easily import Flexgrid to your existing Sass/SCSS file:
 @import 'flexgrid.io/src/flexgrid';
 ```
 
-You can also just download a zipfile of the [latest release](https://github.com/moso/flexgrid/releases/latest/download/flexgrid.zip).
+## CDN
+
+You can find Flexgrid on most public CDNs that cache npm packages, like unpkg:
+```html
+<link rel="stylesheet" href="https://unpkg.com/flexgrid.io@3.0.0/dist/flexgrid.min.css">
+```
+
+You can also link directly to the latest build hosted on my own site:
+```html
+<link rel="stylesheet" href="https://flexgrid.io/dist/3.0.0/flexgrid.min.css">
+```
+Keep in mind that this build is the full build including margin utilities.
+
+### v2.5.2
+
+If you for some reason want the latest old version, you can easily install it with NPM/Yarn as well:
+```bash
+$ npm install --save flexgrid.io@2.5.2 # yarn add flexgrid@2.5.2
+```
 
 ## Classes
 
-Flexgrid now has 5 classes, compared to 4 in v1. You might find these familiar, as these resemble [Bootstrap]:
+Flexgrid comes with 5 easy recognizable classes, if you're familiar with [Bootstrap]:
 - xs (xtra small - for mobile devices and small tablets)
 - sm (small - for large mobile devices and tablets)
 - md (medium - for tablets and very small laptops)
@@ -72,6 +91,10 @@ Flexgrid comes with responsive containers that boxes the content in which are co
 </div>
 ```
 
+## Row
+
+The row is where it all happens. Whether you want to align your content, or you simply just want columns, the `.row`-class is the one that sets `display: flex`.
+
 ## Columns
 
 Flexgrid comes with columns with percent-based widths allow fluid resizing of columns and rows. Rows acts as alignment containers.
@@ -92,13 +115,42 @@ Flexgrid comes with columns with percent-based widths allow fluid resizing of co
 </div>
 ```
 
+## Alignment, offsets, margin, etc
+
+Flexgrid comes with a lot built-in methods to align your content the way you like it. It's never been easier to "center-center" your content. You can even offset columns or reorder them - and this follows the same pattern of being responsive and scalable.
+
+It also comes with an optional utility toolbox where you can use margin as a way to offset/align your content. If you want these enabled, look below.
+
+## Limitations
+
+*__Flexgrid is not a framework__*, thus you won't find every single flexbox property in Flexgrid. As per the name, Flexgrid revolves around being a grid for building layouts. It \*does\* come with some of the most used properties, like alignment, offsets, margin utilities, etc. But to save space and to stick with the scope of the project, you won't find classes that sets `display: flex` on elements, handles `flex-direction`, `flex-wrap`, and so on. I trust you to handle these yourself should you want to build more advanced layouts. However, there are mixins inside the source code for all of these, and thus very easy to build in the classes yourself.
+
+A good example is the flexbox mixin found in `/src/mixins/_flexgrid-mixins.scss`:
+```scss
+@mixin flexbox {
+    display: flex;
+}
+```
+
+If you want expand Flexgrid and build a class into it that, in this case, sets `display: flex`, it can easily be done by using the mixin:
+
+```scss
+.flex {
+    @include flexbox();
+}
+```
+
+Just remember to `@import` the mixins if you're not just editing the source (see below).
+
 ## Editing the source
 
 It's easy to modify the source. Clone this repository and edit away. Flexgrid comes with [webpack](https://webpackjs.org) that compiles the source for you with a single command.
 
+If you want margin utilities enabled, just set the `$enable-utils`-variable to `true` and recompile. This variable can even be overwritten in your own SCSS-variables file if you're using Flexgrid as part of a project, as it's got the `!default`-flag. Just remember to import Flexgrid before your own variables.
+
 ##### Requirements
 
-Compiling the source requires a terminal, and [Node.js](https://nodejs.org) at least v6, or [Yarn](https://yarnpkg.com).
+Compiling the source requires a terminal, and [Node.js](https://nodejs.org) at least v10 (LTS), or [Yarn](https://yarnpkg.com).
 
 To install the dependencies, you just run:
 ```bash
@@ -114,7 +166,7 @@ This will compile a regular `.css`-file, and a minified `.min.css`-file to the `
 
 ## Contributing
 
-PR's are welcome.
+PR's are ~~welcome~~ encouraged.
 
 ## License
 
