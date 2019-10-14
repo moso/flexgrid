@@ -8,6 +8,10 @@ No more floats! Regular grid layout is based on both block and inline flow direc
 
 ### Changelog
 
+**3.0.1 (2019-10-14)**
+- Renamed `_flexgrid` to `_gridgenerator` after discovering some `@import` issues in external projects because of name clashing
+- Updated dependencies
+
 **3.0.0 (2019-10-09)**
 - Complete transition to webpack
 - Rewrite of the grid generator
