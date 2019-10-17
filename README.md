@@ -1,27 +1,28 @@
-# Flexgrid - a simple grid based on flexbox layout
+<p align="center"><img src="https://cdn.rawgit.com/moso/flexgrid/v3.0/assets/flexgrid-banner.svg"></p>
 
-[![Build Status](https://travis-ci.org/moso/flexgrid.svg?branch=master)](https://travis-ci.org/moso/flexgrid)
+<p align="center">
 
-No more floats! Regular grid layout is based on both block and inline flow directions, however, the flexbox (or just flex) layout is based on "flex-flow directions". Thus `float` and `clear` have no effect. Using `float` causes the `display`-property to compute to `block`. Using `flexbox` also means less JavaScript! And everything is, of course, responsive and stacks perfectly.
+[![Netlify](https://img.shields.io/netlify/f2557415-f8a5-4ba8-a315-75b661a90178?label=build&logo=netlify&style=flat-square)](https://app.netlify.com/sites/flexgrid-build/deploys)
+[![Travis](https://img.shields.io/travis/moso/flexgrid/v3.0?logo=travis&style=flat-square)](https://travis-ci.org/moso/flexgrid)
+[![CircleCI](https://img.shields.io/circleci/build/github/moso/flexgrid/v3.0?logo=circleci&style=flat-square)](https://circleci.com/gh/moso/flexgrid)
+[![GitHub Release](https://img.shields.io/github/v/release/moso/flexgrid?logo=github&style=flat-square)](https://github.com/moso/flexgrid/releases/latest)
+[![npm Release](https://img.shields.io/npm/v/flexgrid.io?logo=npm&style=flat-square)](https://npmjs.com/package/flexgrid.io)
+[![npm Downloads Total](https://img.shields.io/npm/dt/flexgrid.io?logo=npm&style=flat-square)](https://npmjs.com/package/flexgrid.io)
+[![npm Downloads Monthly](https://img.shields.io/npm/dm/flexgrid.io?logo=npm&style=flat-square)](https://npmjs.com/package/flexgrid.io)
 
-**Please note:** Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid utilizes the power of `autoprefixer`, so IE10 is relatively safe with prefixes. More info on [Can I Use](http://caniuse.com/#search=flex).
+</p>
 
-### Changelog
+---
 
-**3.0.1 (2019-10-14)**
-- Renamed `_flexgrid` to `_gridgenerator` after discovering some `@import` issues in external projects because of name clashing
-- Updated dependencies
+##### No more floats. Containers and columns made easy.
 
-**3.0.0 (2019-10-09)**
-- Complete transition to webpack
-- Rewrite of the grid generator
-- Simplified alignment class names
-- Added optional margin utilities
-- Added `space-evenly` (note: no support in IE, `space-between` is used as fallback)
-- Ditched Tailwind syntax (use 2.x branch if you need it)
-- Discarded demo files - use the new documentation website
+Regular grid layout is based on both block and inline flow directions, however, the flexbox (or just flex) layout is based on "`flex-flow` directions". Thus `float` and `clear` have no effect. Using `float` actually causes the `display`-property to compute back to `block`. Using flexbox also means less JavaScript! And Flexgrid is, of course, responsive, mobile-first in mind, and stacks perfectly.
 
-Older changelogs can be found in the 2.x branch.
+Flexgrid is open-source and everything can easily be modified. Let's say you want more or less than the standard 12 columns. Because Flexgrid is made with SCSS, you only have to edit a single digit, and then recompile. The entire sourcecode is available here on GitHub, where you're also welcome to fork the project.
+
+**Please note**: Flexbox is only partially supported by IE10. Any IE-version lower than 10 does not support flexbox. However, Flexgrid is powered by [Autoprefixer](https://github.com/postcss/autoprefixer) that use [Browserslist](https://github.com/browserslist/browserslist), which gets its data from [Can I Use](https://caniuse.com). By configuring autoprefixer, Flexgrid is supported all the way down to IE 10. Flexgrid also makes sure to support the latest [Firefox ESR release](https://www.mozilla.org/en-US/firefox/enterprise).
+
+---
 
 ## Documentation
 
@@ -167,6 +168,27 @@ $ npm run build # yarn run build
 ```
 
 This will compile a regular `.css`-file, and a minified `.min.css`-file to the `/dist`-folder.
+
+### Changelog
+
+**3.0.2 (2019-10-17)**
+- Added compiled build including utilities. Find them at `/dist/flexgrid-utils.css`, etc.
+- Minor code clean-up
+
+**3.0.1 (2019-10-14)**
+- Renamed `_flexgrid` to `_gridgenerator` after discovering some `@import` issues in external projects because of name clashing
+- Updated dependencies
+
+**3.0.0 (2019-10-09)**
+- Complete transition to webpack
+- Rewrite of the grid generator
+- Simplified alignment class names
+- Added optional margin utilities
+- Added `space-evenly` (note: no support in IE, `space-between` is used as fallback)
+- Ditched Tailwind syntax (use 2.x branch if you need it)
+- Discarded demo files - use the new documentation website
+
+Older changelogs can be found in the 2.x branch.
 
 ## Contributing
 
