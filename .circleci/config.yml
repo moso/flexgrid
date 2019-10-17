@@ -1,0 +1,35 @@
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# title      Circle CI Build Configuration                       +
+# project    flexgrid                                            +
+# repository https://github.com/moso/flexgrid                    +
+# author     Morten Sørensen                                     +
+# email      morten@moso.io                                      +
+# copyright  Copyright (C) 2015 - present                        +
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#
+# [References]
+# Circle CI
+#   https://circleci.com/docs
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: 'circleci/node:10'
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-depencencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: yarn-install
+          command: 'yarn install'
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: build
+          command: 'yarn run build'
