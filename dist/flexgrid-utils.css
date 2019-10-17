@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * Flexgrid v3.0.2 (https://flexgrid.io)
  * Copyright 2015-present Morten Sørensen (morten@moso.io)
@@ -1323,5 +1323,89 @@ html {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly; } }
 
+.xs-mx-auto, .mx-auto {
+  margin-left: auto;
+  margin-right: auto; }
 
-/*# sourceMappingURL=flexgrid.css.map*/
+.xs-mr-auto, .mr-auto {
+  margin-right: auto; }
+
+.xs-ml-auto, .ml-auto {
+  margin-left: auto; }
+
+.xs-my-auto, .my-auto {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.xs-mt-auto, .mt-auto {
+  margin-top: auto; }
+
+.xs-mb-auto, .mb-auto {
+  margin-bottom: auto; }
+
+@media (min-width: 36rem) {
+  .sm-mx-auto, .mx-auto {
+    margin-left: auto;
+    margin-right: auto; }
+  .sm-mr-auto, .mr-auto {
+    margin-right: auto; }
+  .sm-ml-auto, .ml-auto {
+    margin-left: auto; }
+  .sm-my-auto, .my-auto {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .sm-mt-auto, .mt-auto {
+    margin-top: auto; }
+  .sm-mb-auto, .mb-auto {
+    margin-bottom: auto; } }
+
+@media (min-width: 48rem) {
+  .md-mx-auto, .mx-auto {
+    margin-left: auto;
+    margin-right: auto; }
+  .md-mr-auto, .mr-auto {
+    margin-right: auto; }
+  .md-ml-auto, .ml-auto {
+    margin-left: auto; }
+  .md-my-auto, .my-auto {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .md-mt-auto, .mt-auto {
+    margin-top: auto; }
+  .md-mb-auto, .mb-auto {
+    margin-bottom: auto; } }
+
+@media (min-width: 62rem) {
+  .lg-mx-auto, .mx-auto {
+    margin-left: auto;
+    margin-right: auto; }
+  .lg-mr-auto, .mr-auto {
+    margin-right: auto; }
+  .lg-ml-auto, .ml-auto {
+    margin-left: auto; }
+  .lg-my-auto, .my-auto {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .lg-mt-auto, .mt-auto {
+    margin-top: auto; }
+  .lg-mb-auto, .mb-auto {
+    margin-bottom: auto; } }
+
+@media (min-width: 75rem) {
+  .xl-mx-auto, .mx-auto {
+    margin-left: auto;
+    margin-right: auto; }
+  .xl-mr-auto, .mr-auto {
+    margin-right: auto; }
+  .xl-ml-auto, .ml-auto {
+    margin-left: auto; }
+  .xl-my-auto, .my-auto {
+    margin-top: auto;
+    margin-bottom: auto; }
+  .xl-mt-auto, .mt-auto {
+    margin-top: auto; }
+  .xl-mb-auto, .mb-auto {
+    margin-bottom: auto; } }
+
+
+/*# sourceMappingURL=flexgrid-utils.css.map*/
