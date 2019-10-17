@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/moso/flexgrid/v3.0/assets/flexgrid-banner.svg"></p>
+<p align="center"><img src="https://gitcdn.xyz/repo/moso/flexgrid/v3.0/assets/flexgrid-banner.svg"></p>
 
 <p align="center">
 
