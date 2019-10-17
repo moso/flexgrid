@@ -1,3 +1,7 @@
+3.0.2 (2019-10-17)
+- Added compiled build including utilities. Find them at `/dist/flexgrid-utils.css`, etc.
+- Minor code clean-up
+
 3.0.1 (2019-10-14)
 - Renamed `_flexgrid` to `_gridgenerator` after discovering some `@import` issues in external projects because of name clashing
 - Updated dependencies
