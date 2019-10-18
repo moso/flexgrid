@@ -1,6 +1,6 @@
 {
   "name": "flexgrid.io",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A simple grid based on flexbox layout",
   "scripts": {
     "build": "cross-env webpack"
