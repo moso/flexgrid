@@ -11,7 +11,8 @@ module.exports = {
     },
 
     entry: {
-        flexgrid: './src/flexgrid.scss'
+        flexgrid: './src/flexgrid.scss',
+        'flexgrid-utils': './src/flexgrid-utils.scss'
     },
 
     output: {
