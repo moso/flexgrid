@@ -1,3 +1,8 @@
+3.0.3 (2019-10-18)
+- Updated webpack config
+- Update of README with new documentation
+- Removed `package-lock.json` from the project
+
 3.0.2 (2019-10-17)
 - Added compiled build including utilities. Find them at `/dist/flexgrid-utils.css`, etc.
 - Minor code clean-up
