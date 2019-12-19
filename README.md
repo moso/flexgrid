@@ -164,6 +164,7 @@ This will compile a regular `.css`-file, and a minified `.min.css`-file to the `
 
 **3.0.4 (2019-12-19)**
 - Security updates
+- Updated Netlify config
 - Updated Travis CI config
 - Updated CircleCI config
 
