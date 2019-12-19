@@ -1,6 +1,6 @@
 <p align="center"><img src="https://rawcdn.githack.com/moso/flexgrid/5d896d643a77e5a494236094f98d9d44035b1690/assets/flexgrid-banner.svg"></p>
 
-<p align="center"><a href="https://app.netlify.com/sites/flexgrid-build/deploys"><img src="https://img.shields.io/netlify/f2557415-f8a5-4ba8-a315-75b661a90178?label=build&logo=netlify&style=flat-square"></a> <a href="https://travis-ci.org/moso/flexgrid"><img src="https://img.shields.io/travis/moso/flexgrid/master?logo=travis&style=flat-square"> <a href="https://circleci.com/gh/moso/flexgrid"><img src="https://img.shields.io/circleci/build/github/moso/flexgrid/master?logo=circleci&style=flat-square"/></a> <a href="https://github.com/moso/flexgrid/releases/latest"><img src="https://img.shields.io/github/v/release/moso/flexgrid?logo=github&style=flat-square"></a> <a href="https://npmjs.com/package/flexgrid.io"><img src="https://img.shields.io/npm/v/flexgrid.io?logo=npm&style=flat-square"></a> <a href="https://npmjs.com/package/flexgrid.io"><img src="https://img.shields.io/npm/dt/flexgrid.io?logo=npm&style=flat-square"></a> <a href="https://npmjs.com/package/flexgrid.io"><img src="https://img.shields.io/npm/dm/flexgrid.io?logo=npm&style=flat-square"></a></p></p>
+<p align="center"><a href="https://app.netlify.com/sites/flexgrid-build/deploys"><img src="https://img.shields.io/netlify/f2557415-f8a5-4ba8-a315-75b661a90178?label=build&logo=netlify&style=flat-square"></a> <a href="https://travis-ci.org/moso/flexgrid"><img src="https://img.shields.io/travis/moso/flexgrid/master?logo=travis&style=flat-square"></a> <a href="https://circleci.com/gh/moso/flexgrid"><img src="https://img.shields.io/circleci/build/github/moso/flexgrid/master?logo=circleci&style=flat-square"/></a> <a href="https://github.com/moso/flexgrid/releases/latest"><img src="https://img.shields.io/github/v/release/moso/flexgrid?logo=github&style=flat-square"></a> <a href="https://npmjs.com/package/flexgrid.io"><img src="https://img.shields.io/npm/v/flexgrid.io?logo=npm&style=flat-square"></a> <a href="https://npmjs.com/package/flexgrid.io"><img src="https://img.shields.io/npm/dt/flexgrid.io?logo=npm&style=flat-square"></a> <a href="https://npmjs.com/package/flexgrid.io"><img src="https://img.shields.io/npm/dm/flexgrid.io?logo=npm&style=flat-square"></a></p></p>
 
 ---
 
@@ -146,7 +146,7 @@ If you want margin utilities enabled by default, just set the `$enable-utils`-va
 
 ##### Requirements
 
-Compiling the source requires a terminal, and [Node.js](https://nodejs.org) at least v10 (LTS), or [Yarn](https://yarnpkg.com).
+Compiling the source requires a terminal, and [Node.js](https://nodejs.org) at least v12 (LTS), or [Yarn](https://yarnpkg.com).
 
 To install the dependencies, you just run:
 ```bash
