@@ -162,6 +162,11 @@ This will compile a regular `.css`-file, and a minified `.min.css`-file to the `
 
 ### Changelog
 
+**3.0.4 (2019-12-19)**
+- Security updates
+- Updated Travis CI config
+- Updated CircleCI config
+
 **3.0.3 (2019-10-18)**
 - Updated webpack config
 - Update of README with new documentation
